@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c1fccad1-a879-4083-92b7-7ba18dce999c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/services.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/sign-in.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sign-in.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/sign-up.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sign-up.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/caffe-americano.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/caffe-misto.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/cappuccino.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/contact-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/dark-roast-coffee.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/entertainment.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/espresso-macchiato.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/espresso.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/flat-white.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/home-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/menu-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/menu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/parking.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/services-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/services.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/sign-in-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/sign-up-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/venue.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/who-we-are.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/menu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_config.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_contact.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_home.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_menu.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_responsive.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_services.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_sign-in.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_sign-up.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/main.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/main.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springboot/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springboot/config/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springboot/web/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springboot/web/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/scss/_home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/scss/_home.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/scss/_menu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/scss/_menu.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/scss/_responsive.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/scss/_responsive.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/scss/_sign-in.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/scss/_sign-in.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/scss/_sign-up.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/scss/_sign-up.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/scss/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/scss/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/scss/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/scss/main.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/javaguides/springboot/config/SecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/javaguides/springboot/config/SecurityConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/javaguides/springboot/web/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/javaguides/springboot/web/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/scss/_home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/scss/_home.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/scss/_menu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/scss/_menu.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/scss/_responsive.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/scss/_responsive.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/scss/_sign-in.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/scss/_sign-in.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/scss/_sign-up.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/scss/_sign-up.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/scss/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/scss/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/scss/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/scss/main.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Новый текстовый документ.txt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Vz9LcSTUsxiakoOnYc3WVaXd5G" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/zzaha/Documents/example_TC",
+    "nodejs_package_manager_path": "npm",
+    "spring.configuration.checksum": "9aed74c5816986508f91bc23332795d1"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\zzaha\Documents\GitHub\sales-coffee-dnu-project 1\src\main\resources\templates" />
+      <recent name="C:\Users\zzaha\Documents\GitHub\sales-coffee-dnu-project 1\src\main\resources\static" />
+      <recent name="C:\Users\zzaha\Documents\GitHub\sales-coffee-dnu-project 1\dist" />
+      <recent name="C:\Users\zzaha\Documents\GitHub\sales-coffee-dnu-project\src\main\resources\templates" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.RegistrationLoginSpringBootSecurityThymeleafApplication (1)">
+    <configuration name="All in generated-requests" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http">
+      <method v="2" />
+    </configuration>
+    <configuration name="RegistrationLoginSpringBootSecurityThymeleafApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="sales-coffee-dnu-project 1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="net.javaguides.springboot.RegistrationLoginSpringBootSecurityThymeleafApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegistrationLoginSpringBootSecurityThymeleafApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="sales-coffee-dnu-project" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="net.javaguides.springboot.RegistrationLoginSpringBootSecurityThymeleafApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.All in generated-requests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c1fccad1-a879-4083-92b7-7ba18dce999c" name="Changes" comment="" />
+      <created>1695827986943</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1695827986943</updated>
+      <workItem from="1695827988749" duration="11295000" />
+      <workItem from="1695843955481" duration="3859000" />
+      <workItem from="1695881073611" duration="6598000" />
+      <workItem from="1695982487127" duration="3295000" />
+      <workItem from="1696230189681" duration="5596000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
