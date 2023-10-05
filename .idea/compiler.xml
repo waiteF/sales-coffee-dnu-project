@@ -7,14 +7,19 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="sales-coffee-dnu-project 1" />
+        <module name="sales-coffee-dnu-project-main" />
         <module name="registration-login-spring-boot-security-thymeleaf" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="sales-coffee-dnu-project-main" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="registration-login-spring-boot-security-thymeleaf" options="-parameters" />
       <module name="sales-coffee-dnu-project 1" options="-parameters" />
+      <module name="sales-coffee-dnu-project-main" options="-parameters" />
     </option>
   </component>
 </project>

@@ -6,47 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c1fccad1-a879-4083-92b7-7ba18dce999c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/services.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/sign-in.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sign-in.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/sign-up.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sign-up.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/caffe-americano.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/caffe-misto.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/cappuccino.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/contact-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/dark-roast-coffee.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/entertainment.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/espresso-macchiato.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/espresso.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/flat-white.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/home-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/menu-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/menu.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/parking.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/services-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/services.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/sign-in-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/sign-up-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/venue.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/who-we-are.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/menu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/_config.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/_contact.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/_home.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/_menu.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/_responsive.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/_services.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/_sign-in.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/_sign-up.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/main.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/main.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springboot/Controller/UserRegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springboot/Controller/UserRegistrationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springboot/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springboot/config/SecurityConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springboot/web/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springboot/web/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
@@ -57,9 +21,12 @@
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/scss/_sign-in.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/scss/_sign-in.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/scss/_sign-up.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/scss/_sign-up.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/scss/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/scss/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/scss/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/scss/main.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/contact.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/services.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sign-in.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sign-in.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sign-up.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sign-up.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/net/javaguides/springboot/config/SecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/javaguides/springboot/config/SecurityConfiguration.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/net/javaguides/springboot/web/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/javaguides/springboot/web/MainController.class" afterDir="false" />
@@ -70,10 +37,12 @@
       <change beforePath="$PROJECT_DIR$/target/classes/static/scss/_sign-in.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/scss/_sign-in.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/scss/_sign-up.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/scss/_sign-up.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/scss/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/scss/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/scss/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/scss/main.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/contact.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Новый текстовый документ.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/services.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/sign-in.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/sign-in.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/sign-up.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/sign-up.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +54,13 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectId" id="2Vz9LcSTUsxiakoOnYc3WVaXd5G" />
   <component name="ProjectViewState">
@@ -100,17 +76,36 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/zzaha/Documents/example_TC",
+    "last_opened_file_path": "D:/clone/sales-coffee-dnu-project/sales-coffee-dnu-project",
     "nodejs_package_manager_path": "npm",
-    "spring.configuration.checksum": "9aed74c5816986508f91bc23332795d1"
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "spring.configuration.checksum": "0801b1dcbe255dbdfc01a09348777cd5"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Команда\sales-coffee-dnu-project-main\src\main\resources\templates" />
+      <recent name="D:\Команда\sales-coffee-dnu-project-main\src\main\resources\static" />
+      <recent name="D:\Команда\sales-coffee-dnu-project-main\src\main\java\net\javaguides\springboot" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Команда\sales-coffee-dnu-project-main\src\main\java\net\javaguides\springboot\config" />
       <recent name="C:\Users\zzaha\Documents\GitHub\sales-coffee-dnu-project 1\src\main\resources\templates" />
       <recent name="C:\Users\zzaha\Documents\GitHub\sales-coffee-dnu-project 1\src\main\resources\static" />
       <recent name="C:\Users\zzaha\Documents\GitHub\sales-coffee-dnu-project 1\dist" />
       <recent name="C:\Users\zzaha\Documents\GitHub\sales-coffee-dnu-project\src\main\resources\templates" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="net.javaguides.springboot" />
+      <recent name="net.javaguides.springboot.web.dto" />
+      <recent name="net.javaguides.springboot.Controller" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -120,29 +115,46 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.RegistrationLoginSpringBootSecurityThymeleafApplication (1)">
-    <configuration name="All in generated-requests" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http">
+  <component name="RunManager" selected="Spring Boot.CoffeeApplication">
+    <configuration name="All in generated-requests" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http">
       <method v="2" />
     </configuration>
+    <configuration name="CoffeeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" />
+      <module name="sales-coffee-dnu-project-main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="net.javaguides.springboot.CoffeeApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RegistrationLoginSpringBootSecurityThymeleafApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="sales-coffee-dnu-project 1" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="net.javaguides.springboot.RegistrationLoginSpringBootSecurityThymeleafApplication" />
+      <module name="sales-coffee-dnu-project-main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="net.javaguides.springboot.CoffeeApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="RegistrationLoginSpringBootSecurityThymeleafApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="sales-coffee-dnu-project" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="net.javaguides.springboot.RegistrationLoginSpringBootSecurityThymeleafApplication" />
+      <module name="sales-coffee-dnu-project-main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="net.javaguides.springboot.CoffeeApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="HTTP Request.All in generated-requests" />
-      </list>
-    </recent_temporary>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" />
+      <module name="sales-coffee-dnu-project-main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="net.javaguides.springboot.CoffeeApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="HTTP Request.All in generated-requests" />
+      <item itemvalue="Spring Boot.CoffeeApplication" />
+      <item itemvalue="Spring Boot.RegistrationLoginSpringBootSecurityThymeleafApplication" />
+      <item itemvalue="Spring Boot.RegistrationLoginSpringBootSecurityThymeleafApplication (1)" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -157,6 +169,11 @@
       <workItem from="1695881073611" duration="6598000" />
       <workItem from="1695982487127" duration="3295000" />
       <workItem from="1696230189681" duration="5596000" />
+      <workItem from="1696454790724" duration="514000" />
+      <workItem from="1696455352793" duration="1424000" />
+      <workItem from="1696481612515" duration="5833000" />
+      <workItem from="1696500712170" duration="16000" />
+      <workItem from="1696500897297" duration="124000" />
     </task>
     <servers />
   </component>

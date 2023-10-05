@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html  lang="uk_UA" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Система управління записами з меню</title>
+
+  <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+</head>
+<body>
+
+
+
+<div class="container my-2">
+  <h1>Меню</h1>
+  <a th:href="@{/logout}" class="btn btn-danger btn-sm mb-3">Вихід</a>
+  <a th:href="@{/admin/showNewCoffeForm}" class="btn btn-primary btn-sm mb-3"> Додати запис </a>
+
+  <table  style="text-align: center;" border="1" class="table table-striped table-responsive-md">
+    <thead>
+    <tr>
+      <th>
+        <a th:href="@{'/page/' + ${currentPage} + '?sortField=nsme&sortDir=' + ${reverseSortDir}}">
+          Назва кави</a>
+      </th>
+      <th>
+        <a th:href="@{'/page/' + ${currentPage} + '?sortField=delivery_price&sortDir=' + ${reverseSortDir}}">
+          Ціна за поставку</a>
+      </th>
+      <th>
+        <a th:href="@{'/page/' + ${currentPage} + '?sortField=selling_price&sortDir=' + ${reverseSortDir}}">
+          Ціна за продаж</a>
+      </th>
+      <th>
+        <a th:href="@{'/page/' + ${currentPage} + '?sortField=quantity&sortDir=' + ${reverseSortDir}}">
+         Кількість</a>
+      </th>
+      <th>
+        <a th:href="@{'/page/' + ${currentPage} + '?sortField=netWeight&sortDir=' + ${reverseSortDir}}">
+          Маса нетто</a>
+      </th>
+      <th>
+        <a th:href="@{'/page/' + ${currentPage} + '?sortField=type&sortDir=' + ${reverseSortDir}}">
+          Вид кави</a>
+      </th>
+      <th>
+        <a th:href="@{'/page/' + ${currentPage} + '?sortField=producer&sortDir=' + ${reverseSortDir}}">
+         Виробник</a>
+      </th>
+      <th>
+        <a th:href="@{'/page/' + ${currentPage} + '?sortField=coffeeComposition&sortDir=' + ${reverseSortDir}}">
+         Склад</a>
+      </th>
+
+
+      <th> Дії</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="coffe : ${listCoffe}">
+      <td th:text="${coffe.name}"></td>
+      <td th:text="${coffe.delivery_price}"></td>
+      <td th:text="${coffe.selling_price}"></td>
+      <td th:text="${coffe.quantity}"></td>
+      <td th:text="${coffe.net_weight}"></td>
+      <td th:text="${coffe.type}"></td>
+      <td th:text="${coffe.producer}"></td>
+      <td th:text="${coffe.coffee_compos}"></td>
+
+
+
+      <td><a th:href="@{/admin/showFormForUpdate/{id}(id=${coffe.id})}" class="btn btn-primary">Оновити</a>
+        <br><br><a th:href="@{/admin/deleteCoffe/{id}(id=${coffe.id})}" class="btn btn-danger">Видалити</a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <div th:if="${totalPages > 1}">
+    <div class="row col-sm-10">
+      <div class="col-sm-2">
+        Кількість записів: [[${totalItems}]]
+      </div>
+      <div class="col-sm-1">
+               <span th:each="i: ${#numbers.sequence(1, totalPages)}">
+                  <a th:if="${currentPage != i}"
+                     th:href="@{'/admin/page/' + ${i}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">[[${i}]]</a>
+                  <span th:unless="${currentPage != i}">[[${i}]]</span>  &nbsp; &nbsp;
+               </span>
+      </div>
+      <div class="col-sm-1">
+        <a th:if="${currentPage < totalPages}"
+           th:href="@{'/admin/page/' + ${currentPage + 1}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">Наступний</a>
+        <span th:unless="${currentPage < totalPages}">Наступний</span>
+      </div>
+
+      <div class="col-sm-1">
+        <a th:if="${currentPage < totalPages}"
+           th:href="@{'/admin/page/' + ${totalPages}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">Останній</a>
+        <span th:unless="${currentPage < totalPages}">Останній</span>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

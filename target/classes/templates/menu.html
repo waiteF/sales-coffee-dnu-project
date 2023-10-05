@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="uk"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -75,14 +77,18 @@
           </div>
           <div class="register">
             <li class="menu-nav__item">
-              <a href="sign-in" class="sign-in menu-nav__link">
+              <a sec:authorize="!isAuthenticated()" href="sign-in" class="sign-in menu-nav__link">
                 <i class="fa fa-user" aria-hidden="true"></i>
                 Увійти
               </a>
-              <span class="menu-nav__item" id="slash">/</span>
-              <a href="sign-up" class="sign-up menu-nav__link">
-                Зареєструватися
+              <a sec:authorize="!isAuthenticated()" href="sign-up" class="sign-up v"> Зареєструватися </a>
+              <a sec:authorize="isAuthenticated()"  class="sign-in menu-nav__link">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <span sec:authentication="principal.username"> </span>
               </a>
+
+              <a sec:authorize="isAuthenticated()"th:href="@{/logout}" class="sign-up v" >Вихід</a>
+
             </li>
           </div>
         </ul>

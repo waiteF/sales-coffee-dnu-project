@@ -38,10 +38,7 @@ public class MainController {
 	public String login() {
 		return "sign-in";
 	}
-	@GetMapping("/sign-up")
-	public String registration() {
-		return "sign-up";
-	}
+
 
 	@GetMapping("/")
 	public String home(Authentication authentication, Model model) {
