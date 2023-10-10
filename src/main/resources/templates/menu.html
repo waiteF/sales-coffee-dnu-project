@@ -2,1235 +2,1099 @@
 <html lang="uk"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Кав'ярня "Drip" - Меню</title>
-    <link rel="stylesheet" href="../static/scss/main.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Marck+Script&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="../static/img/favicon.png" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Кав'ярня "Drip" - Меню</title>
+  <link rel="stylesheet" href="../static/scss/main.css" />
+  <link
+          href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Marck+Script&display=swap"
+          rel="stylesheet"
+  />
+  <link rel="icon" href="../static/img/favicon.png" />
+</head>
 
-  <section class="menu">
-    <header class="second-header">
-      <div class="cart-overlay">
-        <div class="cart">
-          <div class="cart__closeBtn">
-            <i class="fas fa-window-close"></i>
-          </div>
-          <h2>
-            <i class="fa fa-cart-arrow-down"></i>
-            <span class="span-primary">Кошик</span> Покупок
-            <i class="fa fa-cart-arrow-down"></i>
-          </h2>
-
-          <!-- JavaScript додасть сюди товари -->
-          <div class="item1-display"></div>
-          <div class="item2-display"></div>
-          <div class="item3-display"></div>
-          <div class="item4-display"></div>
-          <div class="item5-display"></div>
-          <div class="item6-display"></div>
-          <div class="item7-display"></div>
-          <div class="item8-display"></div>
-          <div class="item9-display"></div>
-          <div class="item10-display"></div>
-          <div class="item11-display"></div>
-          <div class="item12-display"></div>
-          <div class="total"></div>
+<section class="menu">
+  <header class="second-header">
+    <div class="cart-overlay">
+      <div class="cart">
+        <div class="cart__closeBtn">
+          <i class="fas fa-window-close"></i>
         </div>
-      </div>
-      <div class="menu-btn">
-        <span class="menu-btn__burger"></span>
-      </div>
+        <h2>
+          <i class="fa fa-cart-arrow-down"></i>
+          <span class="span-primary">Кошик</span> Покупок
+          <i class="fa fa-cart-arrow-down"></i>
+        </h2>
 
-      <nav class="nav">
-        <ul class="menu-nav">
+        <!-- JavaScript додасть сюди товари -->
+        <div class="item1-display"></div>
+        <div class="item2-display"></div>
+        <div class="item3-display"></div>
+        <div class="item4-display"></div>
+        <div class="item5-display"></div>
+        <div class="item6-display"></div>
+        <div class="item7-display"></div>
+        <div class="item8-display"></div>
+        <div class="item9-display"></div>
+        <div class="item10-display"></div>
+        <div class="item11-display"></div>
+        <div class="item12-display"></div>
+        <div class="total"></div>
+      </div>
+    </div>
+    <div class="menu-btn">
+      <span class="menu-btn__burger"></span>
+    </div>
+
+    <nav class="nav">
+      <ul class="menu-nav">
+        <li class="menu-nav__item">
+          <a href="index" class="logo menu-nav__link">
+            <img src="../static/img/favicon.png" />
+            <span class="logo-first">Drip</span>
+            <span class="logo-last">Cafe</span>
+          </a>
+        </li>
+        <div class="pages">
           <li class="menu-nav__item">
-            <a href="index" class="logo menu-nav__link">
-              <img src="../static/img/favicon.png" />
-              <span class="logo-first">Drip</span>
-              <span class="logo-last">Cafe</span>
+            <a href="index" class="menu-nav__link"> Головна</a>
+          </li>
+          <li class="menu-nav__item active">
+            <a href="menu" class="menu-nav__link"> Меню </a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="services" class="menu-nav__link"> Послуги </a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="contact" class="menu-nav__link"> Контакти </a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="#!" class="menu-nav__link cart__openBtn">
+              <i class="fa fa-cart-plus" aria-hidden="true"></i>
             </a>
           </li>
-          <div class="pages">
-            <li class="menu-nav__item">
-              <a href="index" class="menu-nav__link"> Головна</a>
-            </li>
-            <li class="menu-nav__item active">
-              <a href="menu" class="menu-nav__link"> Меню </a>
-            </li>
-            <li class="menu-nav__item">
-              <a href="services" class="menu-nav__link"> Послуги </a>
-            </li>
-            <li class="menu-nav__item">
-              <a href="contact" class="menu-nav__link"> Контакти </a>
-            </li>
-            <li class="menu-nav__item">
-              <a href="#!" class="menu-nav__link cart__openBtn">
-                <i class="fa fa-cart-plus" aria-hidden="true"></i>
-              </a>
-            </li>
-          </div>
-          <div class="register">
-            <li class="menu-nav__item">
-              <a sec:authorize="!isAuthenticated()" href="sign-in" class="sign-in menu-nav__link">
-                <i class="fa fa-user" aria-hidden="true"></i>
-                Увійти
-              </a>
-              <a sec:authorize="!isAuthenticated()" href="sign-up" class="sign-up v"> Зареєструватися </a>
-              <a sec:authorize="isAuthenticated()"  class="sign-in menu-nav__link">
-                <i class="fa fa-user" aria-hidden="true"></i>
-                <span sec:authentication="principal.username"> </span>
-              </a>
+        </div>
+        <div class="register">
+          <li class="menu-nav__item">
+            <a sec:authorize="!isAuthenticated()" href="sign-in" class="sign-in menu-nav__link">
+              <i class="fa fa-user" aria-hidden="true"></i>
+              Увійти
+            </a>
+            <a sec:authorize="!isAuthenticated()" href="sign-up" class="sign-up v"> Зареєструватися </a>
+            <a sec:authorize="isAuthenticated()"  class="sign-in menu-nav__link">
+              <i class="fa fa-user" aria-hidden="true"></i>
+              <span sec:authentication="principal.username"> </span>
+            </a>
 
-              <a sec:authorize="isAuthenticated()"th:href="@{/logout}" class="sign-up v" >Вихід</a>
+            <a sec:authorize="isAuthenticated()"th:href="@{/logout}" class="sign-up v" >Вихід</a>
 
-            </li>
+          </li>
+        </div>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="products">
+    <div class="grid">
+      <div th:each="coffee : ${coffees}">
+        <div class="box">
+          <div class="img-container">
+            <img th:src="@{../static/img/{image}(image=${coffee.image})}" alt="Coffee" />
+
+            <!-- Используем условия для определения, какие ссылки отображать -->
+            <div class="box__btns">
+              <a th:if="${coffee.id == 1}" href="#!" class="box__btn one__view__openBtn">Переглянути</a>
+              <a th:if="${coffee.id == 1}" href="#!" class="box__btn one__cart__button">Додати до кошика</a>
+              <a th:if="${coffee.id == 2}" href="#!" class="box__btn two__view__openBtn">Переглянути</a>
+              <a th:if="${coffee.id == 2}" href="#!" class="box__btn two__cart__button">Додати до кошика</a>
+              <a th:if="${coffee.id == 3}" href="#!" class="box__btn three__view__openBtn">Переглянути</a>
+              <a th:if="${coffee.id == 3}" href="#!" class="box__btn three__cart__button">Додати до кошика</a>
+              <a th:if="${coffee.id == 4}" href="#!" class="box__btn four__view__openBtn">Переглянути</a>
+              <a th:if="${coffee.id == 4}" href="#!" class="box__btn four__cart__button">Додати до кошика</a>
+              <a th:if="${coffee.id == 5}" href="#!" class="box__btn five__view__openBtn">Переглянути</a>
+              <a th:if="${coffee.id == 5}" href="#!" class="box__btn five__cart__button">Додати до кошика</a>
+              <a th:if="${coffee.id == 6}" href="#!" class="box__btn six__view__openBtn">Переглянути</a>
+              <a th:if="${coffee.id == 6}" href="#!" class="box__btn six__cart__button">Додати до кошика</a>
+              <a th:if="${coffee.id == 7}" href="#!" class="box__btn seven__view__openBtn">Переглянути</a>
+              <a th:if="${coffee.id == 7}" href="#!" class="box__btn seven__cart__button">Додати до кошика</a>
+              <a th:if="${coffee.id == 8}" href="#!" class="box__btn eight__view__openBtn">Переглянути</a>
+              <a th:if="${coffee.id == 8}" href="#!" class="box__btn eight__cart__button">Додати до кошика</a>
+              <a th:if="${coffee.id == 9}" href="#!" class="box__btn nine__view__openBtn">Переглянути</a>
+              <a th:if="${coffee.id == 9}" href="#!" class="box__btn nine__cart__button">Додати до кошика</a>
+              <a th:if="${coffee.id == 10}" href="#!" class="box__btn ten__view__openBtn">Переглянути</a>
+              <a th:if="${coffee.id == 10}" href="#!" class="box__btn ten__cart__button">Додати до кошика</a>
+              <a th:if="${coffee.id == 11}" href="#!" class="box__btn eleven__view__openBtn">Переглянути</a>
+              <a th:if="${coffee.id == 11}" href="#!" class="box__btn eleven__cart__button">Додати до кошика</a>
+              <a th:if="${coffee.id == 12}" href="#!" class="box__btn twelve__view__openBtn">Переглянути</a>
+              <a th:if="${coffee.id == 12}" href="#!" class="box__btn twelve__cart__button">Додати до кошика</a>
+
+            </div>
           </div>
-        </ul>
-      </nav>
+          <h2 th:text="${coffee.name}"></h2>
+          <h3 th:text="${coffee.selling_price}"></h3>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  </div>
+    <header>
+      <div class="details">
+        <!-- Вид 1: Кава Американо -->
+        <div class="one__view-overlay">
+          <div class="one__view">
+            <div class="one__view__closeBtn">
+              <i class="fas fa-window-close"></i>
+            </div>
+            <div class="one__view-content">
+              <h2>
+                <i class="fas fa-mug-hot"></i>
+                <span class="span-primary">Кава</span> Американо
+                <i class="fas fa-mug-hot"></i>
+              </h2>
+              <div class="description">
+                Еспресо з гарячою водою створюють легкий шар крему, завершуючи
+                цей дивовижно насичений стакан з глибиною та нюансами.
+                <br />
+                Професійний порада: Для додаткового заряду попросіть свого
+                баристу додати ще один еспресо.
+              </div>
+              <img src="../static/img/caffe-americano.jpg" alt="Кава Американо" />
+              <div class="nutritional_info">
+                <h2>
+                  <span class="span-primary">Інформація</span> про харчову
+                  цінність
+                </h2>
+                <div class="bar-large">Порція 16 унцій</div>
+                <div class="bar-medium">
+                  <b>Калорії</b> 15
+                  <span class="span-right">Калорії з жиру 0</span>
+                </div>
+                <div class="bar-small">
+                  <div class="span-align-right">
+                    % Відсоток денної рації *
+                  </div>
+                </div>
+                <div class="bar-small"><b>Загальні жири</b> 0 г</div>
+                <div class="bar-small">
+                  <div class="indent">Насичені жири 0 г</div>
+                </div>
+                <div class="bar-small">
+                  <div class="indent">Трансжири 0 г</div>
+                </div>
+                <div class="bar-small"><b>Холестерин</b> 0 мг</div>
+                <div class="bar-small">
+                  <b>Натрій</b> 10 мг <span class="span-right">0%</span>
+                </div>
+                <div class="bar-small">
+                  <b>Вуглеводи загальні</b> 2 г
+                  <span class="span-right">1%</span>
+                </div>
+                <div class="bar-small">
+                  <div class="indent">Пищова клітковина 0 г</div>
+                </div>
+                <div class="bar-small">
+                  <div class="indent">Цукри 0 г</div>
+                </div>
+                <div class="bar-small">
+                  <b>Білок</b> 1 г <span class="span-right">2%</span>
+                </div>
+                <div class="bar-small"><b>Кофеїн</b> 225 мг</div>
+                * 2 000 калорій на день використовуються для загальних
+                рекомендацій щодо харчування, але потреби в калоріях
+                різняться.
+              </div>
+
+              <div class="ingredients">
+                <h2>Склад</h2>
+                Вода, Заварене еспресо
+              </div>
+
+              <div class="allergens">
+                <h2>Алергени</h2>
+                Недоступно для цього продукту
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Вид 2: Кава Місто -->
+        <div class="two__view-overlay">
+          <div class="two__view">
+            <div class="two__view__closeBtn">
+              <i class="fas fa-window-close"></i>
+            </div>
+            <div class="two__view-content">
+              <h2>
+                <i class="fas fa-mug-hot"></i>
+                <span class="span-primary">Кава</span> Місто
+                <i class="fas fa-mug-hot"></i>
+              </h2>
+              <div class="description">
+                Рівна комбінація свіжоприготованої кави і обігрітої молока
+                створюють одну неймовірно смачну кавову напій, який дивно
+                змішано.
+              </div>
+              <img src="../static/img/caffe-misto.jpg" alt="Кава Місто" />
+              <div class="nutritional_info">
+                <h2>
+                  <span class="span-primary">Інформація</span> про харчову
+                  цінність
+                </h2>
+                <div class="bar-large">Порція 16 унцій</div>
+                <div class="bar-medium">
+                  <b>Калорії</b> 110
+                  <span class="span-right">Калорії з жиру 35</span>
+                </div>
+                <div class="bar-small">
+                  <div class="span-align-right">
+                    % Відсоток денної рації *
+                  </div>
+                </div>
+                <div class="bar-small">
+                  <b>Загальні жири</b> 4 г <span class="span-right">5%</span>
+                </div>
+                <div class="bar-small">
+                  <div class="indent">
+                    Насичені жири 2 г <span class="span-right">10%</span>
+                  </div>
+                </div>
+                <div class="bar-small">
+                  <div class="indent">Трансжири 0 г</div>
+                </div>
+                <div class="bar-small">
+                  <b>Холестерин</b> 15 мг <span class="span-right">5%</span>
+                </div>
+                <div class="bar-small">
+                  <b>Натрій</b> 100 мг <span class="span-right">4%</span>
+                </div>
+                <div class="bar-small">
+                  <b>Вуглеводи загальні</b> 10 г
+                  <span class="span-right">4%</span>
+                </div>
+                <div class="bar-small">
+                  <div class="indent">Пищова клітковина 0 г</div>
+                </div>
+                <div class="bar-small">
+                  <div class="indent">Цукри 10 г</div>
+                </div>
+                <div class="bar-small">
+                  <b>Білок</b> 7 г <span class="span-right">14%</span>
+                </div>
+                <div class="bar-small"><b>Кофеїн</b> 150 мг</div>
+                * 2 000 калорій на день використовуються для загальних
+                рекомендацій щодо харчування, але потреби в калоріях
+                різняться.
+              </div>
+
+              <div class="ingredients">
+                <h2>Склад</h2>
+                Заварена кава, Молоко
+              </div>
+
+              <div class="allergens">
+                <h2>Алергени</h2>
+                Недоступно для цього продукту
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Вид 3: Блонд Кава Американо -->
+        <div class="three__view-overlay">
+          <div class="three__view">
+            <div class="three__view__closeBtn">
+              <i class="fas fa-window-close"></i>
+            </div>
+            <div class="three__view-content">
+              <h2>
+                <i class="fas fa-mug-hot"></i>
+                <span class="span-primary">Блонд Кава</span> Американо
+                <i class="fas fa-mug-hot"></i>
+              </h2>
+              <div class="description">
+                Еспресо з гарячою водою, щоб утворити легкий шар крему,
+                приготоване з нашим Starbucks® Blonde Roast для додатково
+                гладенької, трохи солодкої і нюансованої кави. <br />
+                Професійний порада: Для додаткового заряду попросіть свого
+                баристу додати ще один еспресо (85 мг кофеїну на один
+                еспресо).
+              </div>
+              <img
+                      src="../static/img/caffe-americano.jpg"
+                      alt="Блонд Кава Американо"
+              />
+              <div class="nutritional_info">
+                <h2>
+                  <span class="span-primary">Інформація</span> про харчову
+                  цінність
+                </h2>
+                <div class="bar-large">Порція 16 унцій</div>
+                <div class="bar-medium">
+                  <b>Калорії</b> 15
+                  <span class="span-right">Калорії з жиру 0</span>
+                </div>
+                <div class="bar-small">
+                  <div class="span-align-right">
+                    % Відсоток денної рації *
+                  </div>
+                </div>
+                <div class="bar-small"><b>Загальні жири</b> 0 г</div>
+                <div class="bar-small">
+                  <div class="indent">Насичені жири 0 г</div>
+                </div>
+                <div class="bar-small">
+                  <div class="indent">Трансжири 0 г</div>
+                </div>
+                <div class="bar-small"><b>Холестерин</b> 0 мг</div>
+                <div class="bar-small">
+                  <b>Натрій</b> 10 мг <span class="span-right">0%</span>
+                </div>
+                <div class="bar-small">
+                  <b>Вуглеводи загальні</b> 2 г
+                  <span class="span-right">1%</span>
+                </div>
+                <div class="bar-small">
+                  <div class="indent">Пищова клітковина 0 г</div>
+                </div>
+                <div class="bar-small">
+                  <div class="indent">Цукри 0 г</div>
+                </div>
+                <div class="bar-small">
+                  <b>Білок</b> 1 г <span class="span-right">2%</span>
+                </div>
+                <div class="bar-small"><b>Кофеїн</b> 225 мг</div>
+                * 2 000 калорій на день використовуються для загальних
+                рекомендацій щодо харчування, але потреби в калоріях
+                різняться.
+              </div>
+
+              <div class="ingredients">
+                <h2>Склад</h2>
+                Вода, Заварене еспресо
+              </div>
+
+              <div class="allergens">
+                <h2>Алергени</h2>
+                Недоступно для цього продукту
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Вид 4: Блонд Обсмажування -->
+        <div class="four__view-overlay">
+          <div class="four__view">
+            <div class="four__view__closeBtn">
+              <i class="fas fa-window-close"></i>
+            </div>
+            <div class="four__view-content">
+              <h2>
+                <i class="fas fa-mug-hot"></i>
+                <span class="span-primary">Блонд</span> Обсмажування
+                <i class="fas fa-mug-hot"></i>
+              </h2>
+              <div class="description">
+                Світло обсмажена кава, яка є ніжною, м'якою та ароматною.
+                Легко п'ється сама по собі і смачно з молоком, цукром або
+                ароматизована ванільним, карамельним або горіховим смаком.
+              </div>
+              <img
+                      src="../static/img/dark-roast-coffee.jpg"
+                      alt="Блонд Обсмажування"
+              />
+              <div class="nutritional_info">
+                <h2>
+                  <span class="span-primary">Інформація</span> про харчову
+                  цінність
+                </h2>
+                <div class="bar-large">Порція 16 унцій</div>
+                <div class="bar-medium">
+                  <b>Калорії</b> 5
+                  <span class="span-right">Калорії з жиру 0</span>
+                </div>
+                <div class="bar-small">
+                  <div class="span-align-right">
+                    % Відсоток денної рації *
+                  </div>
+                </div>
+                <div class="bar-small"><b>Загальні жири</b> 0 г</div>
+                <div class="bar-small">
+                  <div class="indent">Насичені жири 0 г</div>
+                </div>
+                <div class="bar-small">
+                  <div class="indent">Трансжири 0 г</div>
+                </div>
+                <div class="bar-small"><b>Холестерин</b> 0 мг</div>
+                <div class="bar-small">
+                  <b>Натрій</b> 10 мг <span class="span-right">0%</span>
+                </div>
+                <div class="bar-small"><b>Вуглеводи загальні</b> 0 г</div>
+                <div class="bar-small">
+                  <div class="indent">Пищова клітковина 0 г</div>
+                </div>
+                <div class="bar-small">
+                  <div class="indent">Цукри 0 г</div>
+                </div>
+                <div class="bar-small">
+                  <b>Білок</b> 1 г <span class="span-right">2%</span>
+                </div>
+                <div class="bar-small"><b>Кофеїн</b> 360 мг</div>
+                * 2 000 калорій на день використовуються для загальних
+                рекомендацій щодо харчування, але потреби в калоріях
+                різняться.
+              </div>
+
+              <div class="ingredients">
+                <h2>Склад</h2>
+                Заварена кава
+              </div>
+
+              <div class="allergens">
+                <h2>Алергени</h2>
+                Недоступно для цього продукту
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Вид 5: Темне Обсмажування Кави -->
+        <div class="five__view-overlay">
+          <div class="five__view">
+            <div class="five__view__closeBtn">
+              <i class="fas fa-window-close"></i>
+            </div>
+            <div class="five__view-content">
+              <h2>
+                <i class="fas fa-mug-hot"></i>
+                <span class="span-primary">Темне Обсмажування</span> Кави
+                <i class="fas fa-mug-hot"></i>
+              </h2>
+              <div class="description">
+                Ця повнотіла кава темного обсмажування з виразними, кріпкими
+                смаками показує наше мистецтво обсмажування і змішування -
+                необхідний бленд з балансованими і тривалими смаками.
+              </div>
+              <img
+                      src="../static/img/dark-roast-coffee.jpg"
+                      alt="Темне Обсмажування Кави"
+              />
+              <div class="nutritional_info">
+                <h2>
+                  <span class="span-primary">Інформація</span> про харчову
+                  цінність
+                </h2>
+                <div class="bar-large">Розмір порції 16 унцій</div>
+                <div class="bar-medium">
+                  <b>Калорії</b> 5
+                  <span class="span-right">Калорії з жиру 0</span>
+                </div>
+                <div class="bar-small">
+                  <div class="span-align-right">% Денна вартість *</div>
+                </div>
+                <div class="bar-small"><b>Загальні жири</b> 0 г</div>
+                <div class="bar-small">
+                  <div class="indent">Насичені жири 0 г</div>
+                </div>
+                <div class="bar-small">
+                  <div class="indent">Трансжири 0 г</div>
+                </div>
+                <div class="bar-small"><b>Холестерин</b> 0 мг</div>
+                <div class="bar-small">
+                  <b>Натрій</b> 10 мг <span class="span-right">0%</span>
+                </div>
+                <div class="bar-small"><b>Вуглеводи загальні</b> 0 г</div>
+                <div class="bar-small">
+                  <div class="indent">Дієтичні волокна 0 г</div>
+                </div>
+                <div class="bar-small">
+                  <div class="indent">Цукри 0 г</div>
+                </div>
+                <div class="bar-small">
+                  <b>Білок</b> 1 г <span class="span-right">2%</span>
+                </div>
+                <div class="bar-small"><b>Кофеїн</b> 260 мг</div>
+                * 2 000 калорій на день використовуються для загальних
+                рекомендацій щодо харчування, але потреби в калоріях
+                різняться.
+              </div>
+
+              <div class="ingredients">
+                <h2>Склад</h2>
+                Заварена кава
+              </div>
+
+              <div class="allergens">
+                <h2>Алергени</h2>
+                Недоступно для цього продукту
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Вид 6: Рост Пайка Place® -->
+        <div class="six__view-overlay">
+          <div class="six__view">
+            <div class="six__view__closeBtn">
+              <i class="fas fa-window-close"></i>
+            </div>
+            <div class="six__view-content">
+              <h2>
+                <i class="fas fa-mug-hot"></i>
+                <span class="span-primary">Рост Пайка®</span> Place
+                <i class="fas fa-mug-hot"></i>
+              </h2>
+              <div class="description">
+                Від нашого першого магазину на ринку Пайка Плейс в Сіетлі до
+                наших кав'ярень по всьому світу, клієнти просили про
+                свіжозаварену каву, якою вони могли б насолоджуватися протягом
+                усього дня. У 2008 році наші майстри змішування і обсмажування
+                створили це для вас - гладке, збалансоване поєднання кави з
+                Латинської Америки з нюансами шоколаду і обсмажених горіхів,
+                яке подається свіжим щодня в Starbucks® поблизу вас.
+              </div>
+              <img
+                      src="../static/img/dark-roast-coffee.jpg"
+                      alt="Рост Пайка® Place"
+              />
+              <div class="nutritional_info">
+                <h2>
+                  <span class="span-primary">Інформація</span> про харчову
+                  цінність
+                </h2>
+                <div class="bar-large">Розмір порції 16 унцій</div>
+                <div class="bar-medium">
+                  <b>Калорії</b> 5
+                  <span class="span-right">Калорії з жиру 0</span>
+                </div>
+                <div class="bar-small">
+                  <div class="span-align-right">% Денна вартість *</div>
+                </div>
+                <div class="bar-small"><b>Загальні жири</b> 0 г</div>
+                <div class="bar-small">
+                  <div class="indent">Насичені жири 0 г</div>
+                </div>
+                <div class="bar-small">
+                  <div class="indent">Трансжири 0 г</div>
+                </div>
+                <div class="bar-small"><b>Холестерин</b> 0 мг</div>
+                <div class="bar-small">
+                  <b>Натрій</b> 10 мг <span class="span-right">0%</span>
+                </div>
+                <div class="bar-small"><b>Вуглеводи загальні</b> 0 г</div>
+                <div class="bar-small">
+                  <div class="indent">Дієтичні волокна 0 г</div>
+                </div>
+                <div class="bar-small">
+                  <div class="indent">Цукри 0 г</div>
+                </div>
+                <div class="bar-small">
+                  <b>Білок</b> 1 г <span class="span-right">2%</span>
+                </div>
+                <div class="bar-small"><b>Кофеїн</b> 310 мг</div>
+                * 2 000 калорій на день використовуються для загальних
+                рекомендацій щодо харчування, але потреби в калоріях
+                різняться.
+              </div>
+
+              <div class="ingredients">
+                <h2>Склад</h2>
+                Заварена кава
+              </div>
+
+              <div class="allergens">
+                <h2>Алергени</h2>
+                Недоступно для цього продукту
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Вид 7: Декаф Пайка Place® -->
+        <div class="seven__view-overlay">
+          <div class="seven__view">
+            <div class="seven__view__closeBtn">
+              <i class="fas fa-window-close"></i>
+            </div>
+            <div class="seven__view-content">
+              <h2>
+                <i class="fas fa-mug-hot"></i>
+                <span class="span-primary">Декаф Пайка</span> Place®
+                <i class="fas fa-mug-hot"></i>
+              </h2>
+              <div class="description">
+                Від нашого першого магазину на ринку Пайка Плейс в Сіетлі до
+                наших кав'ярень по всьому світу, клієнти просили про
+                свіжозаварену каву, якою вони могли б насолоджуватися протягом
+                усього дня. У 2008 році наші майстри змішування і обсмажування
+                створили це для вас - гладке, збалансоване поєднання кави з
+                Латинської Америки з нюансами шоколаду і обсмажених горіхів,
+                яке подається свіжим щодня в Starbucks® поблизу вас. (Декаф,
+                як вам подобається.)
+              </div>
+              <img src="../static/img/caffe-americano.jpg" alt="Caffè Americano" />
+              <div class="nutritional_info">
+                <h2>
+                  <span class="span-primary">Інформація</span> про харчову
+                  цінність
+                </h2>
+                <div class="bar-large">Розмір порції 16 унцій</div>
+                <div class="bar-medium">
+                  <b>Калорії</b> 5
+                  <span class="span-right">Калорії з жиру 0</span>
+                </div>
+                <div class="bar-small">
+                  <div class="span-align-right">% Денна вартість *</div>
+                </div>
+                <div class="bar-small"><b>Загальні жири</b> 0 г</div>
+                <div class="bar-small">
+                  <div class="indent">Насичені жири 0 г</div>
+                </div>
+                <div class="bar-small">
+                  <div class="indent">Трансжири 0 г</div>
+                </div>
+                <div class="bar-small"><b>Холестерин</b> 0 мг</div>
+                <div class="bar-small">
+                  <b>Натрій</b> 10 мг <span class="span-right">0%</span>
+                </div>
+                <div class="bar-small"><b>Вуглеводи загальні</b> 0 г</div>
+                <div class="bar-small">
+                  <div class="indent">Дієтичні волокна 0 г</div>
+                </div>
+                <div class="bar-small">
+                  <div class="indent">Цукри 0 г</div>
+                </div>
+                <div class="bar-small">
+                  <b>Білок</b> 1 г <span class="span-right">2%</span>
+                </div>
+                <div class="bar-small"><b>Кофеїн</b> 25 мг</div>
+                * 2 000 калорій на день використовуються для загальних
+                рекомендацій щодо харчування, але потреби в калоріях
+                різняться.
+              </div>
+
+              <div class="ingredients">
+                <h2>Склад</h2>
+                Заварена декафеїнована кава
+              </div>
+
+              <div class="allergens">
+                <h2>Алергени</h2>
+                Недоступно для цього продукту
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Вид 8: Капучино -->
+        <div class="eight__view-overlay">
+          <div class="eight__view">
+            <div class="eight__view__closeBtn">
+              <i class="fas fa-window-close"></i>
+            </div>
+            <div class="eight__view-content">
+              <h2>
+                <i class="fas fa-mug-hot"></i>
+                <span class="span-primary">Капучіно</span>
+                <i class="fas fa-mug-hot"></i>
+              </h2>
+              <div class="description">
+                Темна, насичена еспресо чекає під густим шаром молочної піни.
+                Це - результат мистецтва і вправності бариста.
+              </div>
+              <img src="../static/img/cappuccino.jpg" alt="Капучіно" />
+              <div class="nutritional_info">
+                <h2>
+                  <span class="span-primary">Інформація</span> про харчову
+                  цінність
+                </h2>
+                <div class="bar-large">Розмір порції 16 унцій</div>
+                <div class="bar-medium">
+                  <b>Калорії</b> 120
+                  <span class="span-right">Калорії з жиру 35</span>
+                </div>
+                <div class="bar-small">
+                  <div class="span-align-right">% Денна вартість *</div>
+                </div>
+                <div class="bar-small">
+                  <b>Загальні жири</b> 4 г <span class="span-right">5%</span>
+                </div>
+                <div class="bar-small">
+                  <div class="indent">
+                    Насичені жири 2 г <span class="span-right">10%</span>
+                  </div>
+                </div>
+                <div class="bar-small">
+                  <div class="indent">Трансжири 0 г</div>
+                </div>
+                <div class="bar-small">
+                  <b>Холестерин</b> 15 мг <span class="span-right">5%</span>
+                </div>
+                <div class="bar-small">
+                  <b>Натрій</b> 100 мг <span class="span-right">4%</span>
+                </div>
+                <div class="bar-small">
+                  <b>Вуглеводи загальні</b> 12 г
+                  <span class="span-right">4%</span>
+                </div>
+                <div class="bar-small">
+                  <div class="indent">Дієтичні волокна 0 г</div>
+                </div>
+                <div class="bar-small">
+                  <div class="indent">Цукри 10 г</div>
+                </div>
+                <div class="bar-small">
+                  <b>Білок</b> 8 г <span class="span-right">16%</span>
+                </div>
+                <div class="bar-small"><b>Кофеїн</b> 150 мг</div>
+                * 2 000 калорій на день використовуються для загальних
+                рекомендацій щодо харчування, але потреби в калоріях
+                різняться.
+              </div>
+
+              <div class="ingredients">
+                <h2>Склад</h2>
+                Молоко, заварена еспресо
+              </div>
+
+              <div class="allergens">
+                <h2>Алергени</h2>
+                Недоступно для цього продукту
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Вид 9: Блонд Капучіно -->
+        <div class="nine__view-overlay">
+          <div class="nine__view">
+            <div class="nine__view__closeBtn">
+              <i class="fas fa-window-close"></i>
+            </div>
+            <div class="nine__view-content">
+              <h2>
+                <i class="fas fa-mug-hot"></i>
+                <span class="span-primary">Блонд</span> Капучіно
+                <i class="fas fa-mug-hot"></i>
+              </h2>
+              <div class="description">
+                Наша дуже ніжна і трохи солодка Блонд-еспресо чекає під густим
+                шаром піни. Цей капучіно має розкішну текстуру і бархатисту,
+                пінку з холодним підтоном.
+              </div>
+              <img src="../static/img/cappuccino.jpg" alt="Блонд Капучіно" />
+              <div class="nutritional_info">
+                <h2>
+                  <span class="span-primary">Інформація</span> про харчову
+                  цінність
+                </h2>
+                <div class="bar-large">Розмір порції 16 унцій</div>
+                <div class="bar-medium">
+                  <b>Калорії</b> 120
+                  <span class="span-right">Калорії з жиру 35</span>
+                </div>
+                <div class="bar-small">
+                  <div class="span-align-right">% Денна вартість *</div>
+                </div>
+                <div class="bar-small">
+                  <b>Загальні жири</b> 4 г <span class="span-right">5%</span>
+                </div>
+                <div class="bar-small">
+                  <div class="indent">
+                    Насичені жири 2 г <span class="span-right">10%</span>
+                  </div>
+                </div>
+                <div class="bar-small">
+                  <div class="indent">Трансжири 0 г</div>
+                </div>
+                <div class="bar-small">
+                  <b>Холестерин</b> 15 мг <span class="span-right">5%</span>
+                </div>
+                <div class="bar-small">
+                  <b>Натрій</b> 100 мг <span class="span-right">4%</span>
+                </div>
+                <div class="bar-small">
+                  <b>Вуглеводи загальні</b> 12 г
+                  <span class="span-right">4%</span>
+                </div>
+                <div class="bar-small">
+                  <div class="indent">Дієтичні волокна 0 г</div>
+                </div>
+                <div class="bar-small">
+                  <div class="indent">Цукри 10 г</div>
+                </div>
+                <div class="bar-small">
+                  <b>Білок</b> 8 г <span class="span-right">16%</span>
+                </div>
+                <div class="bar-small"><b>Кофеїн</b> 170 мг</div>
+                * 2 000 калорій на день використовуються для загальних
+                рекомендацій щодо харчування, але потреби в калоріях
+                різняться.
+              </div>
+
+              <div class="ingredients">
+                <h2>Склад</h2>
+                Молоко, заварена еспресо
+              </div>
+
+              <div class="allergens">
+                <h2>Алергени</h2>
+                Недоступно для цього продукту
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Вид 10: Еспресо -->
+        <div class="ten__view-overlay">
+          <div class="ten__view">
+            <div class="ten__view__closeBtn">
+              <i class="fas fa-window-close"></i>
+            </div>
+            <div class="ten__view-content">
+              <h2>
+                <i class="fas fa-mug-hot"></i>
+                <span class="span-primary">Еспресо</span>
+                <i class="fas fa-mug-hot"></i>
+              </h2>
+              <div class="description">
+                Наша гладенька підписна кава Еспресо з багатим смаком і
+                карамельною солодкістю є в самому серці всього, що ми робимо.
+              </div>
+              <img src="../static/img/espresso.jpg" alt="Еспресо" />
+              <div class="nutritional_info">
+                <h2>
+                  <span class="span-primary">Інформація</span> про харчову
+                  цінність
+                </h2>
+                <div class="bar-large">Розмір порції 1,5 унцій</div>
+                <div class="bar-medium">
+                  <b>Калорії</b> 10
+                  <span class="span-right">Калорії з жиру 0</span>
+                </div>
+                <div class="bar-small">
+                  <div class="span-align-right">% Денна вартість *</div>
+                </div>
+                <div class="bar-small"><b>Загальні жири</b> 0 г</div>
+                <div class="bar-small">
+                  <div class="indent">Насичені жири 0 г</div>
+                </div>
+                <div class="bar-small">
+                  <div class="indent">Трансжири 0 г</div>
+                </div>
+                <div class="bar-small"><b>Холестерин</b> 0 мг</div>
+                <div class="bar-small"><b>Натрій</b> 0 мг</div>
+                <div class="bar-small">
+                  <b>Вуглеводи загальні</b> 2 г
+                  <span class="span-right">1%</span>
+                </div>
+                <div class="bar-small">
+                  <div class="indent">Дієтичні волокна 0 г</div>
+                </div>
+                <div class="bar-small">
+                  <div class="indent">Цукри 0 г</div>
+                </div>
+                <div class="bar-small">
+                  <b>Білок</b> 1 г <span class="span-right">2%</span>
+                </div>
+                <div class="bar-small"><b>Кофеїн</b> 150 мг</div>
+                * 2 000 калорій на день використовуються для загальних
+                рекомендацій щодо харчування, але потреби в калоріях
+                різняться.
+              </div>
+
+              <div class="ingredients">
+                <h2>Склад</h2>
+                Заварене еспресо
+              </div>
+
+              <div class="allergens">
+                <h2>Алергени</h2>
+                Недоступно для цього продукту
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Вид 11: Еспресо Макіато -->
+        <div class="eleven__view-overlay">
+          <div class="eleven__view">
+            <div class="eleven__view__closeBtn">
+              <i class="fas fa-window-close"></i>
+            </div>
+            <div class="eleven__view-content">
+              <h2>
+                <i class="fas fa-mug-hot"></i>
+                <span class="span-primary">Еспресо</span> Макіато
+                <i class="fas fa-mug-hot"></i>
+              </h2>
+              <div class="description">
+                Наше багате еспресо з горошинкою пареного молока та піни.
+                Класика європейського стилю.
+              </div>
+              <img
+                      src="../static/img/espresso-macchiato.jpg"
+                      alt="Еспресо Макіато"
+              />
+              <div class="nutritional_info">
+                <h2>
+                  <span class="span-primary">Інформація</span> про харчову
+                  цінність
+                </h2>
+                <div class="bar-large">Розмір порції 1,6 унцій</div>
+                <div class="bar-medium">
+                  <b>Калорії</b> 15
+                  <span class="span-right">Калорії з жиру 0</span>
+                </div>
+                <div class="bar-small">
+                  <div class="span-align-right">% Денна вартість *</div>
+                </div>
+                <div class="bar-small"><b>Загальні жири</b> 0 г</div>
+                <div class="bar-small">
+                  <div class="indent">Насичені жири 0 г</div>
+                </div>
+                <div class="bar-small">
+                  <div class="indent">Трансжири 0 г</div>
+                </div>
+                <div class="bar-small"><b>Холестерин</b> 0 мг</div>
+                <div class="bar-small"><b>Натрій</b> 0 мг</div>
+                <div class="bar-small">
+                  <b>Вуглеводи загальні</b> 2 г
+                  <span class="span-right">1%</span>
+                </div>
+                <div class="bar-small">
+                  <div class="indent">Дієтичні волокна 0 г</div>
+                </div>
+                <div class="bar-small">
+                  <div class="indent">Цукри 0 г</div>
+                </div>
+                <div class="bar-small">
+                  <b>Білок</b> 1 г <span class="span-right">2%</span>
+                </div>
+                <div class="bar-small"><b>Кофеїн</b> 150 мг</div>
+                * 2 000 калорій на день використовуються для загальних
+                рекомендацій щодо харчування, але потреби в калоріях
+                різняться.
+              </div>
+
+              <div class="ingredients">
+                <h2>Склад</h2>
+                Заварене еспресо, молоко
+              </div>
+
+              <div class="allergens">
+                <h2>Алергени</h2>
+                Недоступно для цього продукту
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="twelve__view-overlay">
+          <div class="twelve__view">
+            <div class="twelve__view__closeBtn">
+              <i class="fas fa-window-close"></i>
+            </div>
+            <div class="twelve__view-content">
+              <h2>
+                <i class="fas fa-mug-hot"></i>
+                <span class="span-primary">Флет</span> Вайт
+                <i class="fas fa-mug-hot"></i>
+              </h2>
+              <div class="description">
+                Гладенькі рістретто-шоти еспресо отримують відповідну
+                кількість пареного цілого молока, щоб створити смак, який не
+                занадто крепкий, не занадто слизький, а саме такий, як треба.
+              </div>
+              <img src="../static/img/flat-white.jpg" alt="Флет Вайт" />
+              <div class="nutritional_info">
+                <h2>
+                  <span class="span-primary">Інформація</span> про харчову
+                  цінність
+                </h2>
+                <div class="bar-large">Розмір порції 12 унцій</div>
+                <div class="bar-medium">
+                  <b>Калорії</b> 170
+                  <span class="span-right">Калорії з жиру 80</span>
+                </div>
+                <div class="bar-small">
+                  <div class="span-align-right">% Денна вартість *</div>
+                </div>
+                <div class="bar-small">
+                  <b>Загальні жири</b> 9 г <span class="span-right">12%</span>
+                </div>
+                <div class="bar-small">
+                  <div class="indent">
+                    Насичені жири 5 г <span class="span-right">25%</span>
+                  </div>
+                </div>
+                <div class="bar-small">
+                  <div class="indent">Трансжири 0 г</div>
+                </div>
+                <div class="bar-small">
+                  <b>Холестерин</b> 25 мг <span class="span-right">8%</span>
+                </div>
+                <div class="bar-small">
+                  <b>Натрій</b> 115 мг <span class="span-right">5%</span>
+                </div>
+                <div class="bar-small">
+                  <b>Вуглеводи загальні</b> 14 г
+                  <span class="span-right">5%</span>
+                </div>
+                <div class="bar-small">
+                  <div class="indent">Дієтичні волокна 0 г</div>
+                </div>
+                <div class="bar-small">
+                  <div class="indent">Цукри 13 г</div>
+                </div>
+                <div class="bar-small">
+                  <b>Білок</b> 9 г <span class="span-right">18%</span>
+                </div>
+                <div class="bar-small"><b>Кофеїн</b> 130 мг</div>
+                * 2 000 калорій на день використовуються для загальних
+                рекомендацій щодо харчування, але потреби в калоріях
+                різняться.
+              </div>
+
+              <div class="ingredients">
+                <h2>Склад</h2>
+                Молоко, заварена еспресо
+              </div>
+
+              <div class="allergens">
+                <h2>Алергени</h2>
+                Недоступно для цього продукту
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
+  </main>
 
-    <main class="products">
-      <div class="grid">
-        <div class="box">
-          <div class="img-container">
-            <img src="../static/img/caffe-americano.jpg" alt="Кава Американо" />
-            <div class="box__btns">
-              <a href="#!" class="box__btn one__view__openBtn"> Переглянути </a>
-              <a href="#!" class="box__btn one__cart__button">
-                Додати до кошика
-              </a>
-            </div>
-          </div>
-          <h2>Кава Американо</h2>
-          <h3>$2.10</h3>
-        </div>
-        <div class="box">
-          <div class="img-container">
-            <img src="../static/img/caffe-misto.jpg" alt="Кава Місто" />
-            <div class="box__btns">
-              <a href="#!" class="box__btn two__view__openBtn"> Переглянути </a>
-              <a href="#!" class="box__btn two__cart__button">
-                Додати до кошика
-              </a>
-            </div>
-          </div>
-          <h2>Кава Місто</h2>
-          <h3>$2.60</h3>
-        </div>
-        <div class="box">
-          <div class="img-container">
-            <img src="../static/img/caffe-americano.jpg" alt="Світла Кава Американо" />
-            <div class="box__btns">
-              <a href="#!" class="box__btn three__view__openBtn">
-                Переглянути
-              </a>
-              <a href="#!" class="box__btn three__cart__button">
-                Додати до кошика
-              </a>
-            </div>
-          </div>
-          <h2>Світла Кава Американо</h2>
-          <h3>$2.79</h3>
-        </div>
-        <div class="box">
-          <div class="img-container">
-            <img src="../static/img/dark-roast-coffee.jpg" alt="Світла Кава Ростер" />
-            <div class="box__btns">
-              <a href="#!" class="box__btn four__view__openBtn">
-                Переглянути
-              </a>
-              <a href="#!" class="box__btn four__cart__button">
-                Додати до кошика
-              </a>
-            </div>
-          </div>
-          <h2>Світла Кава Ростер</h2>
-          <h3>$2.05</h3>
-        </div>
-        <div class="box">
-          <div class="img-container">
-            <img src="../static/img/dark-roast-coffee.jpg" alt="Кава Темний Ростер" />
-            <div class="box__btns">
-              <a href="#!" class="box__btn five__view__openBtn">
-                Переглянути
-              </a>
-              <a href="#!" class="box__btn five__cart__button">
-                Додати до кошика
-              </a>
-            </div>
-          </div>
-          <h2>Кава Темний Ростер</h2>
-          <h3>$2.20</h3>
-        </div>
-        <div class="box">
-          <div class="img-container">
-            <img
-              src="../static/img/dark-roast-coffee.jpg"
-              alt="Кава Пайк Плейс® Ростер"
-            />
-            <div class="box__btns">
-              <a href="#!" class="box__btn six__view__openBtn"> Переглянути </a>
-              <a href="#!" class="box__btn six__cart__button">
-                Додати до кошика
-              </a>
-            </div>
-          </div>
-          <h2>Кава Пайк Плейс® Ростер</h2>
-          <h3>$2.80</h3>
-        </div>
-        <div class="box">
-          <div class="img-container">
-            <img
-              src="../static/img/dark-roast-coffee.jpg"
-              alt="Безкофеїнова Кава Пайк Плейс® Ростер"
-            />
-            <div class="box__btns">
-              <a href="#!" class="box__btn seven__view__openBtn">
-                Переглянути
-              </a>
-              <a href="#!" class="box__btn seven__cart__button">
-                Додати до кошика
-              </a>
-            </div>
-          </div>
-          <h2>Безкофеїнова Кава Пайк Плейс® Ростер</h2>
-          <h3>$2.25</h3>
-        </div>
-        <div class="box">
-          <div class="img-container">
-            <img src="../static/img/cappuccino.jpg" alt="Капучино" />
-            <div class="box__btns">
-              <a href="#!" class="box__btn eight__view__openBtn">
-                Переглянути
-              </a>
-              <a href="#!" class="box__btn eight__cart__button">
-                Додати до кошика
-              </a>
-            </div>
-          </div>
-          <h2>Капучино</h2>
-          <h3>$2.59</h3>
-        </div>
-        <div class="box">
-          <div class="img-container">
-            <img src="../static/img/cappuccino.jpg" alt="Світле Капучино" />
-            <div class="box__btns">
-              <a href="#!" class="box__btn nine__view__openBtn">
-                Переглянути
-              </a>
-              <a href="#!" class="box__btn nine__cart__button">
-                Додати до кошика
-              </a>
-            </div>
-          </div>
-          <h2>Світле Капучино</h2>
-          <h3>$2.34</h3>
-        </div>
-        <div class="box">
-          <div class="img-container">
-            <img src="../static/img/espresso.jpg" alt="Еспресо" />
-            <div class="box__btns">
-              <a href="#!" class="box__btn ten__view__openBtn"> Переглянути </a>
-              <a href="#!" class="box__btn ten__cart__button">
-                Додати до кошика
-              </a>
-            </div>
-          </div>
-          <h2>Еспресо</h2>
-          <h3>$2.89</h3>
-        </div>
-        <div class="box">
-          <div class="img-container">
-            <img src="../static/img/espresso-macchiato.jpg" alt="Еспресо Макіато" />
-            <div class="box__btns">
-              <a href="#!" class="box__btn eleven__view__openBtn">
-                Переглянути
-              </a>
-              <a href="#!" class="box__btn eleven__cart__button">
-                Додати до кошика
-              </a>
-            </div>
-          </div>
-          <h2>Еспресо Макіато</h2>
-          <h3>$2.18</h3>
-        </div>
-        <div class="box">
-          <div class="img-container">
-            <img src="../static/img/flat-white.jpg" alt="Флат Вайт" />
-            <div class="box__btns">
-              <a href="#!" class="box__btn twelve__view__openBtn">
-                Переглянути
-              </a>
-              <a href="#!" class="box__btn twelve__cart__button">
-                Додати до кошика
-              </a>
-            </div>
-          </div>
-          <h2>Флат Вайт</h2>
-          <h3>$2.75</h3>
-        </div>
-      </div>
-      <header>
-        <div class="details">
-          <!-- Вид 1: Кава Американо -->
-          <div class="one__view-overlay">
-            <div class="one__view">
-              <div class="one__view__closeBtn">
-                <i class="fas fa-window-close"></i>
-              </div>
-              <div class="one__view-content">
-                <h2>
-                  <i class="fas fa-mug-hot"></i>
-                  <span class="span-primary">Кава</span> Американо
-                  <i class="fas fa-mug-hot"></i>
-                </h2>
-                <div class="description">
-                  Еспресо з гарячою водою створюють легкий шар крему, завершуючи
-                  цей дивовижно насичений стакан з глибиною та нюансами.
-                  <br />
-                  Професійний порада: Для додаткового заряду попросіть свого
-                  баристу додати ще один еспресо.
-                </div>
-                <img src="../static/img/caffe-americano.jpg" alt="Кава Американо" />
-                <div class="nutritional_info">
-                  <h2>
-                    <span class="span-primary">Інформація</span> про харчову
-                    цінність
-                  </h2>
-                  <div class="bar-large">Порція 16 унцій</div>
-                  <div class="bar-medium">
-                    <b>Калорії</b> 15
-                    <span class="span-right">Калорії з жиру 0</span>
-                  </div>
-                  <div class="bar-small">
-                    <div class="span-align-right">
-                      % Відсоток денної рації *
-                    </div>
-                  </div>
-                  <div class="bar-small"><b>Загальні жири</b> 0 г</div>
-                  <div class="bar-small">
-                    <div class="indent">Насичені жири 0 г</div>
-                  </div>
-                  <div class="bar-small">
-                    <div class="indent">Трансжири 0 г</div>
-                  </div>
-                  <div class="bar-small"><b>Холестерин</b> 0 мг</div>
-                  <div class="bar-small">
-                    <b>Натрій</b> 10 мг <span class="span-right">0%</span>
-                  </div>
-                  <div class="bar-small">
-                    <b>Вуглеводи загальні</b> 2 г
-                    <span class="span-right">1%</span>
-                  </div>
-                  <div class="bar-small">
-                    <div class="indent">Пищова клітковина 0 г</div>
-                  </div>
-                  <div class="bar-small">
-                    <div class="indent">Цукри 0 г</div>
-                  </div>
-                  <div class="bar-small">
-                    <b>Білок</b> 1 г <span class="span-right">2%</span>
-                  </div>
-                  <div class="bar-small"><b>Кофеїн</b> 225 мг</div>
-                  * 2 000 калорій на день використовуються для загальних
-                  рекомендацій щодо харчування, але потреби в калоріях
-                  різняться.
-                </div>
-
-                <div class="ingredients">
-                  <h2>Склад</h2>
-                  Вода, Заварене еспресо
-                </div>
-
-                <div class="allergens">
-                  <h2>Алергени</h2>
-                  Недоступно для цього продукту
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Вид 2: Кава Місто -->
-          <div class="two__view-overlay">
-            <div class="two__view">
-              <div class="two__view__closeBtn">
-                <i class="fas fa-window-close"></i>
-              </div>
-              <div class="two__view-content">
-                <h2>
-                  <i class="fas fa-mug-hot"></i>
-                  <span class="span-primary">Кава</span> Місто
-                  <i class="fas fa-mug-hot"></i>
-                </h2>
-                <div class="description">
-                  Рівна комбінація свіжоприготованої кави і обігрітої молока
-                  створюють одну неймовірно смачну кавову напій, який дивно
-                  змішано.
-                </div>
-                <img src="../static/img/caffe-misto.jpg" alt="Кава Місто" />
-                <div class="nutritional_info">
-                  <h2>
-                    <span class="span-primary">Інформація</span> про харчову
-                    цінність
-                  </h2>
-                  <div class="bar-large">Порція 16 унцій</div>
-                  <div class="bar-medium">
-                    <b>Калорії</b> 110
-                    <span class="span-right">Калорії з жиру 35</span>
-                  </div>
-                  <div class="bar-small">
-                    <div class="span-align-right">
-                      % Відсоток денної рації *
-                    </div>
-                  </div>
-                  <div class="bar-small">
-                    <b>Загальні жири</b> 4 г <span class="span-right">5%</span>
-                  </div>
-                  <div class="bar-small">
-                    <div class="indent">
-                      Насичені жири 2 г <span class="span-right">10%</span>
-                    </div>
-                  </div>
-                  <div class="bar-small">
-                    <div class="indent">Трансжири 0 г</div>
-                  </div>
-                  <div class="bar-small">
-                    <b>Холестерин</b> 15 мг <span class="span-right">5%</span>
-                  </div>
-                  <div class="bar-small">
-                    <b>Натрій</b> 100 мг <span class="span-right">4%</span>
-                  </div>
-                  <div class="bar-small">
-                    <b>Вуглеводи загальні</b> 10 г
-                    <span class="span-right">4%</span>
-                  </div>
-                  <div class="bar-small">
-                    <div class="indent">Пищова клітковина 0 г</div>
-                  </div>
-                  <div class="bar-small">
-                    <div class="indent">Цукри 10 г</div>
-                  </div>
-                  <div class="bar-small">
-                    <b>Білок</b> 7 г <span class="span-right">14%</span>
-                  </div>
-                  <div class="bar-small"><b>Кофеїн</b> 150 мг</div>
-                  * 2 000 калорій на день використовуються для загальних
-                  рекомендацій щодо харчування, але потреби в калоріях
-                  різняться.
-                </div>
-
-                <div class="ingredients">
-                  <h2>Склад</h2>
-                  Заварена кава, Молоко
-                </div>
-
-                <div class="allergens">
-                  <h2>Алергени</h2>
-                  Недоступно для цього продукту
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Вид 3: Блонд Кава Американо -->
-          <div class="three__view-overlay">
-            <div class="three__view">
-              <div class="three__view__closeBtn">
-                <i class="fas fa-window-close"></i>
-              </div>
-              <div class="three__view-content">
-                <h2>
-                  <i class="fas fa-mug-hot"></i>
-                  <span class="span-primary">Блонд Кава</span> Американо
-                  <i class="fas fa-mug-hot"></i>
-                </h2>
-                <div class="description">
-                  Еспресо з гарячою водою, щоб утворити легкий шар крему,
-                  приготоване з нашим Starbucks® Blonde Roast для додатково
-                  гладенької, трохи солодкої і нюансованої кави. <br />
-                  Професійний порада: Для додаткового заряду попросіть свого
-                  баристу додати ще один еспресо (85 мг кофеїну на один
-                  еспресо).
-                </div>
-                <img
-                  src="../static/img/caffe-americano.jpg"
-                  alt="Блонд Кава Американо"
-                />
-                <div class="nutritional_info">
-                  <h2>
-                    <span class="span-primary">Інформація</span> про харчову
-                    цінність
-                  </h2>
-                  <div class="bar-large">Порція 16 унцій</div>
-                  <div class="bar-medium">
-                    <b>Калорії</b> 15
-                    <span class="span-right">Калорії з жиру 0</span>
-                  </div>
-                  <div class="bar-small">
-                    <div class="span-align-right">
-                      % Відсоток денної рації *
-                    </div>
-                  </div>
-                  <div class="bar-small"><b>Загальні жири</b> 0 г</div>
-                  <div class="bar-small">
-                    <div class="indent">Насичені жири 0 г</div>
-                  </div>
-                  <div class="bar-small">
-                    <div class="indent">Трансжири 0 г</div>
-                  </div>
-                  <div class="bar-small"><b>Холестерин</b> 0 мг</div>
-                  <div class="bar-small">
-                    <b>Натрій</b> 10 мг <span class="span-right">0%</span>
-                  </div>
-                  <div class="bar-small">
-                    <b>Вуглеводи загальні</b> 2 г
-                    <span class="span-right">1%</span>
-                  </div>
-                  <div class="bar-small">
-                    <div class="indent">Пищова клітковина 0 г</div>
-                  </div>
-                  <div class="bar-small">
-                    <div class="indent">Цукри 0 г</div>
-                  </div>
-                  <div class="bar-small">
-                    <b>Білок</b> 1 г <span class="span-right">2%</span>
-                  </div>
-                  <div class="bar-small"><b>Кофеїн</b> 225 мг</div>
-                  * 2 000 калорій на день використовуються для загальних
-                  рекомендацій щодо харчування, але потреби в калоріях
-                  різняться.
-                </div>
-
-                <div class="ingredients">
-                  <h2>Склад</h2>
-                  Вода, Заварене еспресо
-                </div>
-
-                <div class="allergens">
-                  <h2>Алергени</h2>
-                  Недоступно для цього продукту
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Вид 4: Блонд Обсмажування -->
-          <div class="four__view-overlay">
-            <div class="four__view">
-              <div class="four__view__closeBtn">
-                <i class="fas fa-window-close"></i>
-              </div>
-              <div class="four__view-content">
-                <h2>
-                  <i class="fas fa-mug-hot"></i>
-                  <span class="span-primary">Блонд</span> Обсмажування
-                  <i class="fas fa-mug-hot"></i>
-                </h2>
-                <div class="description">
-                  Світло обсмажена кава, яка є ніжною, м'якою та ароматною.
-                  Легко п'ється сама по собі і смачно з молоком, цукром або
-                  ароматизована ванільним, карамельним або горіховим смаком.
-                </div>
-                <img
-                  src="../static/img/dark-roast-coffee.jpg"
-                  alt="Блонд Обсмажування"
-                />
-                <div class="nutritional_info">
-                  <h2>
-                    <span class="span-primary">Інформація</span> про харчову
-                    цінність
-                  </h2>
-                  <div class="bar-large">Порція 16 унцій</div>
-                  <div class="bar-medium">
-                    <b>Калорії</b> 5
-                    <span class="span-right">Калорії з жиру 0</span>
-                  </div>
-                  <div class="bar-small">
-                    <div class="span-align-right">
-                      % Відсоток денної рації *
-                    </div>
-                  </div>
-                  <div class="bar-small"><b>Загальні жири</b> 0 г</div>
-                  <div class="bar-small">
-                    <div class="indent">Насичені жири 0 г</div>
-                  </div>
-                  <div class="bar-small">
-                    <div class="indent">Трансжири 0 г</div>
-                  </div>
-                  <div class="bar-small"><b>Холестерин</b> 0 мг</div>
-                  <div class="bar-small">
-                    <b>Натрій</b> 10 мг <span class="span-right">0%</span>
-                  </div>
-                  <div class="bar-small"><b>Вуглеводи загальні</b> 0 г</div>
-                  <div class="bar-small">
-                    <div class="indent">Пищова клітковина 0 г</div>
-                  </div>
-                  <div class="bar-small">
-                    <div class="indent">Цукри 0 г</div>
-                  </div>
-                  <div class="bar-small">
-                    <b>Білок</b> 1 г <span class="span-right">2%</span>
-                  </div>
-                  <div class="bar-small"><b>Кофеїн</b> 360 мг</div>
-                  * 2 000 калорій на день використовуються для загальних
-                  рекомендацій щодо харчування, але потреби в калоріях
-                  різняться.
-                </div>
-
-                <div class="ingredients">
-                  <h2>Склад</h2>
-                  Заварена кава
-                </div>
-
-                <div class="allergens">
-                  <h2>Алергени</h2>
-                  Недоступно для цього продукту
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Вид 5: Темне Обсмажування Кави -->
-          <div class="five__view-overlay">
-            <div class="five__view">
-              <div class="five__view__closeBtn">
-                <i class="fas fa-window-close"></i>
-              </div>
-              <div class="five__view-content">
-                <h2>
-                  <i class="fas fa-mug-hot"></i>
-                  <span class="span-primary">Темне Обсмажування</span> Кави
-                  <i class="fas fa-mug-hot"></i>
-                </h2>
-                <div class="description">
-                  Ця повнотіла кава темного обсмажування з виразними, кріпкими
-                  смаками показує наше мистецтво обсмажування і змішування -
-                  необхідний бленд з балансованими і тривалими смаками.
-                </div>
-                <img
-                  src="../static/img/dark-roast-coffee.jpg"
-                  alt="Темне Обсмажування Кави"
-                />
-                <div class="nutritional_info">
-                  <h2>
-                    <span class="span-primary">Інформація</span> про харчову
-                    цінність
-                  </h2>
-                  <div class="bar-large">Розмір порції 16 унцій</div>
-                  <div class="bar-medium">
-                    <b>Калорії</b> 5
-                    <span class="span-right">Калорії з жиру 0</span>
-                  </div>
-                  <div class="bar-small">
-                    <div class="span-align-right">% Денна вартість *</div>
-                  </div>
-                  <div class="bar-small"><b>Загальні жири</b> 0 г</div>
-                  <div class="bar-small">
-                    <div class="indent">Насичені жири 0 г</div>
-                  </div>
-                  <div class="bar-small">
-                    <div class="indent">Трансжири 0 г</div>
-                  </div>
-                  <div class="bar-small"><b>Холестерин</b> 0 мг</div>
-                  <div class="bar-small">
-                    <b>Натрій</b> 10 мг <span class="span-right">0%</span>
-                  </div>
-                  <div class="bar-small"><b>Вуглеводи загальні</b> 0 г</div>
-                  <div class="bar-small">
-                    <div class="indent">Дієтичні волокна 0 г</div>
-                  </div>
-                  <div class="bar-small">
-                    <div class="indent">Цукри 0 г</div>
-                  </div>
-                  <div class="bar-small">
-                    <b>Білок</b> 1 г <span class="span-right">2%</span>
-                  </div>
-                  <div class="bar-small"><b>Кофеїн</b> 260 мг</div>
-                  * 2 000 калорій на день використовуються для загальних
-                  рекомендацій щодо харчування, але потреби в калоріях
-                  різняться.
-                </div>
-
-                <div class="ingredients">
-                  <h2>Склад</h2>
-                  Заварена кава
-                </div>
-
-                <div class="allergens">
-                  <h2>Алергени</h2>
-                  Недоступно для цього продукту
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Вид 6: Рост Пайка Place® -->
-          <div class="six__view-overlay">
-            <div class="six__view">
-              <div class="six__view__closeBtn">
-                <i class="fas fa-window-close"></i>
-              </div>
-              <div class="six__view-content">
-                <h2>
-                  <i class="fas fa-mug-hot"></i>
-                  <span class="span-primary">Рост Пайка®</span> Place
-                  <i class="fas fa-mug-hot"></i>
-                </h2>
-                <div class="description">
-                  Від нашого першого магазину на ринку Пайка Плейс в Сіетлі до
-                  наших кав'ярень по всьому світу, клієнти просили про
-                  свіжозаварену каву, якою вони могли б насолоджуватися протягом
-                  усього дня. У 2008 році наші майстри змішування і обсмажування
-                  створили це для вас - гладке, збалансоване поєднання кави з
-                  Латинської Америки з нюансами шоколаду і обсмажених горіхів,
-                  яке подається свіжим щодня в Starbucks® поблизу вас.
-                </div>
-                <img
-                  src="../static/img/dark-roast-coffee.jpg"
-                  alt="Рост Пайка® Place"
-                />
-                <div class="nutritional_info">
-                  <h2>
-                    <span class="span-primary">Інформація</span> про харчову
-                    цінність
-                  </h2>
-                  <div class="bar-large">Розмір порції 16 унцій</div>
-                  <div class="bar-medium">
-                    <b>Калорії</b> 5
-                    <span class="span-right">Калорії з жиру 0</span>
-                  </div>
-                  <div class="bar-small">
-                    <div class="span-align-right">% Денна вартість *</div>
-                  </div>
-                  <div class="bar-small"><b>Загальні жири</b> 0 г</div>
-                  <div class="bar-small">
-                    <div class="indent">Насичені жири 0 г</div>
-                  </div>
-                  <div class="bar-small">
-                    <div class="indent">Трансжири 0 г</div>
-                  </div>
-                  <div class="bar-small"><b>Холестерин</b> 0 мг</div>
-                  <div class="bar-small">
-                    <b>Натрій</b> 10 мг <span class="span-right">0%</span>
-                  </div>
-                  <div class="bar-small"><b>Вуглеводи загальні</b> 0 г</div>
-                  <div class="bar-small">
-                    <div class="indent">Дієтичні волокна 0 г</div>
-                  </div>
-                  <div class="bar-small">
-                    <div class="indent">Цукри 0 г</div>
-                  </div>
-                  <div class="bar-small">
-                    <b>Білок</b> 1 г <span class="span-right">2%</span>
-                  </div>
-                  <div class="bar-small"><b>Кофеїн</b> 310 мг</div>
-                  * 2 000 калорій на день використовуються для загальних
-                  рекомендацій щодо харчування, але потреби в калоріях
-                  різняться.
-                </div>
-
-                <div class="ingredients">
-                  <h2>Склад</h2>
-                  Заварена кава
-                </div>
-
-                <div class="allergens">
-                  <h2>Алергени</h2>
-                  Недоступно для цього продукту
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Вид 7: Декаф Пайка Place® -->
-          <div class="seven__view-overlay">
-            <div class="seven__view">
-              <div class="seven__view__closeBtn">
-                <i class="fas fa-window-close"></i>
-              </div>
-              <div class="seven__view-content">
-                <h2>
-                  <i class="fas fa-mug-hot"></i>
-                  <span class="span-primary">Декаф Пайка</span> Place®
-                  <i class="fas fa-mug-hot"></i>
-                </h2>
-                <div class="description">
-                  Від нашого першого магазину на ринку Пайка Плейс в Сіетлі до
-                  наших кав'ярень по всьому світу, клієнти просили про
-                  свіжозаварену каву, якою вони могли б насолоджуватися протягом
-                  усього дня. У 2008 році наші майстри змішування і обсмажування
-                  створили це для вас - гладке, збалансоване поєднання кави з
-                  Латинської Америки з нюансами шоколаду і обсмажених горіхів,
-                  яке подається свіжим щодня в Starbucks® поблизу вас. (Декаф,
-                  як вам подобається.)
-                </div>
-                <img src="../static/img/caffe-americano.jpg" alt="Caffè Americano" />
-                <div class="nutritional_info">
-                  <h2>
-                    <span class="span-primary">Інформація</span> про харчову
-                    цінність
-                  </h2>
-                  <div class="bar-large">Розмір порції 16 унцій</div>
-                  <div class="bar-medium">
-                    <b>Калорії</b> 5
-                    <span class="span-right">Калорії з жиру 0</span>
-                  </div>
-                  <div class="bar-small">
-                    <div class="span-align-right">% Денна вартість *</div>
-                  </div>
-                  <div class="bar-small"><b>Загальні жири</b> 0 г</div>
-                  <div class="bar-small">
-                    <div class="indent">Насичені жири 0 г</div>
-                  </div>
-                  <div class="bar-small">
-                    <div class="indent">Трансжири 0 г</div>
-                  </div>
-                  <div class="bar-small"><b>Холестерин</b> 0 мг</div>
-                  <div class="bar-small">
-                    <b>Натрій</b> 10 мг <span class="span-right">0%</span>
-                  </div>
-                  <div class="bar-small"><b>Вуглеводи загальні</b> 0 г</div>
-                  <div class="bar-small">
-                    <div class="indent">Дієтичні волокна 0 г</div>
-                  </div>
-                  <div class="bar-small">
-                    <div class="indent">Цукри 0 г</div>
-                  </div>
-                  <div class="bar-small">
-                    <b>Білок</b> 1 г <span class="span-right">2%</span>
-                  </div>
-                  <div class="bar-small"><b>Кофеїн</b> 25 мг</div>
-                  * 2 000 калорій на день використовуються для загальних
-                  рекомендацій щодо харчування, але потреби в калоріях
-                  різняться.
-                </div>
-
-                <div class="ingredients">
-                  <h2>Склад</h2>
-                  Заварена декафеїнована кава
-                </div>
-
-                <div class="allergens">
-                  <h2>Алергени</h2>
-                  Недоступно для цього продукту
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Вид 8: Капучино -->
-          <div class="eight__view-overlay">
-            <div class="eight__view">
-              <div class="eight__view__closeBtn">
-                <i class="fas fa-window-close"></i>
-              </div>
-              <div class="eight__view-content">
-                <h2>
-                  <i class="fas fa-mug-hot"></i>
-                  <span class="span-primary">Капучіно</span>
-                  <i class="fas fa-mug-hot"></i>
-                </h2>
-                <div class="description">
-                  Темна, насичена еспресо чекає під густим шаром молочної піни.
-                  Це - результат мистецтва і вправності бариста.
-                </div>
-                <img src="../static/img/cappuccino.jpg" alt="Капучіно" />
-                <div class="nutritional_info">
-                  <h2>
-                    <span class="span-primary">Інформація</span> про харчову
-                    цінність
-                  </h2>
-                  <div class="bar-large">Розмір порції 16 унцій</div>
-                  <div class="bar-medium">
-                    <b>Калорії</b> 120
-                    <span class="span-right">Калорії з жиру 35</span>
-                  </div>
-                  <div class="bar-small">
-                    <div class="span-align-right">% Денна вартість *</div>
-                  </div>
-                  <div class="bar-small">
-                    <b>Загальні жири</b> 4 г <span class="span-right">5%</span>
-                  </div>
-                  <div class="bar-small">
-                    <div class="indent">
-                      Насичені жири 2 г <span class="span-right">10%</span>
-                    </div>
-                  </div>
-                  <div class="bar-small">
-                    <div class="indent">Трансжири 0 г</div>
-                  </div>
-                  <div class="bar-small">
-                    <b>Холестерин</b> 15 мг <span class="span-right">5%</span>
-                  </div>
-                  <div class="bar-small">
-                    <b>Натрій</b> 100 мг <span class="span-right">4%</span>
-                  </div>
-                  <div class="bar-small">
-                    <b>Вуглеводи загальні</b> 12 г
-                    <span class="span-right">4%</span>
-                  </div>
-                  <div class="bar-small">
-                    <div class="indent">Дієтичні волокна 0 г</div>
-                  </div>
-                  <div class="bar-small">
-                    <div class="indent">Цукри 10 г</div>
-                  </div>
-                  <div class="bar-small">
-                    <b>Білок</b> 8 г <span class="span-right">16%</span>
-                  </div>
-                  <div class="bar-small"><b>Кофеїн</b> 150 мг</div>
-                  * 2 000 калорій на день використовуються для загальних
-                  рекомендацій щодо харчування, але потреби в калоріях
-                  різняться.
-                </div>
-
-                <div class="ingredients">
-                  <h2>Склад</h2>
-                  Молоко, заварена еспресо
-                </div>
-
-                <div class="allergens">
-                  <h2>Алергени</h2>
-                  Недоступно для цього продукту
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Вид 9: Блонд Капучіно -->
-          <div class="nine__view-overlay">
-            <div class="nine__view">
-              <div class="nine__view__closeBtn">
-                <i class="fas fa-window-close"></i>
-              </div>
-              <div class="nine__view-content">
-                <h2>
-                  <i class="fas fa-mug-hot"></i>
-                  <span class="span-primary">Блонд</span> Капучіно
-                  <i class="fas fa-mug-hot"></i>
-                </h2>
-                <div class="description">
-                  Наша дуже ніжна і трохи солодка Блонд-еспресо чекає під густим
-                  шаром піни. Цей капучіно має розкішну текстуру і бархатисту,
-                  пінку з холодним підтоном.
-                </div>
-                <img src="../static/img/cappuccino.jpg" alt="Блонд Капучіно" />
-                <div class="nutritional_info">
-                  <h2>
-                    <span class="span-primary">Інформація</span> про харчову
-                    цінність
-                  </h2>
-                  <div class="bar-large">Розмір порції 16 унцій</div>
-                  <div class="bar-medium">
-                    <b>Калорії</b> 120
-                    <span class="span-right">Калорії з жиру 35</span>
-                  </div>
-                  <div class="bar-small">
-                    <div class="span-align-right">% Денна вартість *</div>
-                  </div>
-                  <div class="bar-small">
-                    <b>Загальні жири</b> 4 г <span class="span-right">5%</span>
-                  </div>
-                  <div class="bar-small">
-                    <div class="indent">
-                      Насичені жири 2 г <span class="span-right">10%</span>
-                    </div>
-                  </div>
-                  <div class="bar-small">
-                    <div class="indent">Трансжири 0 г</div>
-                  </div>
-                  <div class="bar-small">
-                    <b>Холестерин</b> 15 мг <span class="span-right">5%</span>
-                  </div>
-                  <div class="bar-small">
-                    <b>Натрій</b> 100 мг <span class="span-right">4%</span>
-                  </div>
-                  <div class="bar-small">
-                    <b>Вуглеводи загальні</b> 12 г
-                    <span class="span-right">4%</span>
-                  </div>
-                  <div class="bar-small">
-                    <div class="indent">Дієтичні волокна 0 г</div>
-                  </div>
-                  <div class="bar-small">
-                    <div class="indent">Цукри 10 г</div>
-                  </div>
-                  <div class="bar-small">
-                    <b>Білок</b> 8 г <span class="span-right">16%</span>
-                  </div>
-                  <div class="bar-small"><b>Кофеїн</b> 170 мг</div>
-                  * 2 000 калорій на день використовуються для загальних
-                  рекомендацій щодо харчування, але потреби в калоріях
-                  різняться.
-                </div>
-
-                <div class="ingredients">
-                  <h2>Склад</h2>
-                  Молоко, заварена еспресо
-                </div>
-
-                <div class="allergens">
-                  <h2>Алергени</h2>
-                  Недоступно для цього продукту
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Вид 10: Еспресо -->
-          <div class="ten__view-overlay">
-            <div class="ten__view">
-              <div class="ten__view__closeBtn">
-                <i class="fas fa-window-close"></i>
-              </div>
-              <div class="ten__view-content">
-                <h2>
-                  <i class="fas fa-mug-hot"></i>
-                  <span class="span-primary">Еспресо</span>
-                  <i class="fas fa-mug-hot"></i>
-                </h2>
-                <div class="description">
-                  Наша гладенька підписна кава Еспресо з багатим смаком і
-                  карамельною солодкістю є в самому серці всього, що ми робимо.
-                </div>
-                <img src="../static/img/espresso.jpg" alt="Еспресо" />
-                <div class="nutritional_info">
-                  <h2>
-                    <span class="span-primary">Інформація</span> про харчову
-                    цінність
-                  </h2>
-                  <div class="bar-large">Розмір порції 1,5 унцій</div>
-                  <div class="bar-medium">
-                    <b>Калорії</b> 10
-                    <span class="span-right">Калорії з жиру 0</span>
-                  </div>
-                  <div class="bar-small">
-                    <div class="span-align-right">% Денна вартість *</div>
-                  </div>
-                  <div class="bar-small"><b>Загальні жири</b> 0 г</div>
-                  <div class="bar-small">
-                    <div class="indent">Насичені жири 0 г</div>
-                  </div>
-                  <div class="bar-small">
-                    <div class="indent">Трансжири 0 г</div>
-                  </div>
-                  <div class="bar-small"><b>Холестерин</b> 0 мг</div>
-                  <div class="bar-small"><b>Натрій</b> 0 мг</div>
-                  <div class="bar-small">
-                    <b>Вуглеводи загальні</b> 2 г
-                    <span class="span-right">1%</span>
-                  </div>
-                  <div class="bar-small">
-                    <div class="indent">Дієтичні волокна 0 г</div>
-                  </div>
-                  <div class="bar-small">
-                    <div class="indent">Цукри 0 г</div>
-                  </div>
-                  <div class="bar-small">
-                    <b>Білок</b> 1 г <span class="span-right">2%</span>
-                  </div>
-                  <div class="bar-small"><b>Кофеїн</b> 150 мг</div>
-                  * 2 000 калорій на день використовуються для загальних
-                  рекомендацій щодо харчування, але потреби в калоріях
-                  різняться.
-                </div>
-
-                <div class="ingredients">
-                  <h2>Склад</h2>
-                  Заварене еспресо
-                </div>
-
-                <div class="allergens">
-                  <h2>Алергени</h2>
-                  Недоступно для цього продукту
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Вид 11: Еспресо Макіато -->
-          <div class="eleven__view-overlay">
-            <div class="eleven__view">
-              <div class="eleven__view__closeBtn">
-                <i class="fas fa-window-close"></i>
-              </div>
-              <div class="eleven__view-content">
-                <h2>
-                  <i class="fas fa-mug-hot"></i>
-                  <span class="span-primary">Еспресо</span> Макіато
-                  <i class="fas fa-mug-hot"></i>
-                </h2>
-                <div class="description">
-                  Наше багате еспресо з горошинкою пареного молока та піни.
-                  Класика європейського стилю.
-                </div>
-                <img
-                  src="../static/img/espresso-macchiato.jpg"
-                  alt="Еспресо Макіато"
-                />
-                <div class="nutritional_info">
-                  <h2>
-                    <span class="span-primary">Інформація</span> про харчову
-                    цінність
-                  </h2>
-                  <div class="bar-large">Розмір порції 1,6 унцій</div>
-                  <div class="bar-medium">
-                    <b>Калорії</b> 15
-                    <span class="span-right">Калорії з жиру 0</span>
-                  </div>
-                  <div class="bar-small">
-                    <div class="span-align-right">% Денна вартість *</div>
-                  </div>
-                  <div class="bar-small"><b>Загальні жири</b> 0 г</div>
-                  <div class="bar-small">
-                    <div class="indent">Насичені жири 0 г</div>
-                  </div>
-                  <div class="bar-small">
-                    <div class="indent">Трансжири 0 г</div>
-                  </div>
-                  <div class="bar-small"><b>Холестерин</b> 0 мг</div>
-                  <div class="bar-small"><b>Натрій</b> 0 мг</div>
-                  <div class="bar-small">
-                    <b>Вуглеводи загальні</b> 2 г
-                    <span class="span-right">1%</span>
-                  </div>
-                  <div class="bar-small">
-                    <div class="indent">Дієтичні волокна 0 г</div>
-                  </div>
-                  <div class="bar-small">
-                    <div class="indent">Цукри 0 г</div>
-                  </div>
-                  <div class="bar-small">
-                    <b>Білок</b> 1 г <span class="span-right">2%</span>
-                  </div>
-                  <div class="bar-small"><b>Кофеїн</b> 150 мг</div>
-                  * 2 000 калорій на день використовуються для загальних
-                  рекомендацій щодо харчування, але потреби в калоріях
-                  різняться.
-                </div>
-
-                <div class="ingredients">
-                  <h2>Склад</h2>
-                  Заварене еспресо, молоко
-                </div>
-
-                <div class="allergens">
-                  <h2>Алергени</h2>
-                  Недоступно для цього продукту
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="twelve__view-overlay">
-            <div class="twelve__view">
-              <div class="twelve__view__closeBtn">
-                <i class="fas fa-window-close"></i>
-              </div>
-              <div class="twelve__view-content">
-                <h2>
-                  <i class="fas fa-mug-hot"></i>
-                  <span class="span-primary">Флет</span> Вайт
-                  <i class="fas fa-mug-hot"></i>
-                </h2>
-                <div class="description">
-                  Гладенькі рістретто-шоти еспресо отримують відповідну
-                  кількість пареного цілого молока, щоб створити смак, який не
-                  занадто крепкий, не занадто слизький, а саме такий, як треба.
-                </div>
-                <img src="../static/img/flat-white.jpg" alt="Флет Вайт" />
-                <div class="nutritional_info">
-                  <h2>
-                    <span class="span-primary">Інформація</span> про харчову
-                    цінність
-                  </h2>
-                  <div class="bar-large">Розмір порції 12 унцій</div>
-                  <div class="bar-medium">
-                    <b>Калорії</b> 170
-                    <span class="span-right">Калорії з жиру 80</span>
-                  </div>
-                  <div class="bar-small">
-                    <div class="span-align-right">% Денна вартість *</div>
-                  </div>
-                  <div class="bar-small">
-                    <b>Загальні жири</b> 9 г <span class="span-right">12%</span>
-                  </div>
-                  <div class="bar-small">
-                    <div class="indent">
-                      Насичені жири 5 г <span class="span-right">25%</span>
-                    </div>
-                  </div>
-                  <div class="bar-small">
-                    <div class="indent">Трансжири 0 г</div>
-                  </div>
-                  <div class="bar-small">
-                    <b>Холестерин</b> 25 мг <span class="span-right">8%</span>
-                  </div>
-                  <div class="bar-small">
-                    <b>Натрій</b> 115 мг <span class="span-right">5%</span>
-                  </div>
-                  <div class="bar-small">
-                    <b>Вуглеводи загальні</b> 14 г
-                    <span class="span-right">5%</span>
-                  </div>
-                  <div class="bar-small">
-                    <div class="indent">Дієтичні волокна 0 г</div>
-                  </div>
-                  <div class="bar-small">
-                    <div class="indent">Цукри 13 г</div>
-                  </div>
-                  <div class="bar-small">
-                    <b>Білок</b> 9 г <span class="span-right">18%</span>
-                  </div>
-                  <div class="bar-small"><b>Кофеїн</b> 130 мг</div>
-                  * 2 000 калорій на день використовуються для загальних
-                  рекомендацій щодо харчування, але потреби в калоріях
-                  різняться.
-                </div>
-
-                <div class="ingredients">
-                  <h2>Склад</h2>
-                  Молоко, заварена еспресо
-                </div>
-
-                <div class="allergens">
-                  <h2>Алергени</h2>
-                  Недоступно для цього продукту
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
-    </main>
-
-    <footer class="footer">
-      <div class="icons">
-        <a href="#!">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="#!">
-          <i class="fab fa-facebook"></i>
-        </a>
-        <a href="#!">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="#!">
-          <i class="fab fa-snapchat-square"></i>
-        </a>
-      </div>
-      <div class="copyright">&copy; Copyright 2022</div>
-    </footer>
-  </section>
-  <script src="../static/js/script.js"></script>
-  <script src="../static/js/menu.js"></script>
-  <script
-    src="https://kit.fontawesome.com/c057664144.js"
-    crossorigin="anonymous"
-  ></script>
+  <footer class="footer">
+    <div class="icons">
+      <a href="#!">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="#!">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="#!">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="#!">
+        <i class="fab fa-snapchat-square"></i>
+      </a>
+    </div>
+    <div class="copyright">&copy; Copyright 2022</div>
+  </footer>
+</section>
+<script src="../static/js/script.js"></script>
+<script src="../static/js/menu.js"></script>
+<script
+        src="https://kit.fontawesome.com/c057664144.js"
+        crossorigin="anonymous"
+></script>
 </html>

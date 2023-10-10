@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.ui.Model;
 import org.springframework.security.core.Authentication;
 
+import javax.persistence.Column;
+import java.math.BigDecimal;
 import java.util.List;
 
 @Controller
@@ -21,7 +23,9 @@ public class MainController {
 	}
 
 	@GetMapping("/menu")
-	public String menu() {
+	public String menu(Model model) {
+		List<Coffe> coffees = coffeService.getAllCoffe();
+		model.addAttribute("coffees", coffees);
 		return "menu";
 	}
 

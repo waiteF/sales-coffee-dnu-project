@@ -5,44 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1fccad1-a879-4083-92b7-7ba18dce999c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/menu.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/302f49da-e846-4a64-9dba-4cb51f214a7b.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/302f49da-e846-4a64-9dba-4cb51f214a7b/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/302f49da-e846-4a64-9dba-4cb51f214a7b/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/302f49da-e846-4a64-9dba-4cb51f214a7b/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/302f49da-e846-4a64-9dba-4cb51f214a7b/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fb57b192-02e7-4894-964f-42395bfca588.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fb57b192-02e7-4894-964f-42395bfca588/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fb57b192-02e7-4894-964f-42395bfca588/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fb57b192-02e7-4894-964f-42395bfca588/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fb57b192-02e7-4894-964f-42395bfca588/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springboot/Controller/UserRegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springboot/Controller/UserRegistrationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springboot/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springboot/config/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springboot/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springboot/service/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/javaguides/springboot/web/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/javaguides/springboot/web/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/scss/_home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/scss/_home.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/scss/_menu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/scss/_menu.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/scss/_responsive.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/scss/_responsive.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/scss/_sign-in.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/scss/_sign-in.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/scss/_sign-up.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/scss/_sign-up.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/scss/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/scss/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/services.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sign-in.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sign-in.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sign-up.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sign-up.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/javaguides/springboot/config/SecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/javaguides/springboot/config/SecurityConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/javaguides/springboot/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/javaguides/springboot/service/UserServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/net/javaguides/springboot/web/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/javaguides/springboot/web/MainController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/scss/_home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/scss/_home.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/scss/_menu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/scss/_menu.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/scss/_responsive.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/scss/_responsive.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/scss/_sign-in.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/scss/_sign-in.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/scss/_sign-up.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/scss/_sign-up.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/scss/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/scss/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/services.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/sign-in.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/sign-in.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/sign-up.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/sign-up.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,28 +55,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/clone/sales-coffee-dnu-project/sales-coffee-dnu-project",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "spring.configuration.checksum": "0801b1dcbe255dbdfc01a09348777cd5"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/clone/sales-coffee-dnu-project/sales-coffee-dnu-project&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;0801b1dcbe255dbdfc01a09348777cd5&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Команда\sales-coffee-dnu-project-main\src\main\resources\templates" />
@@ -96,11 +84,11 @@
       <recent name="D:\Команда\sales-coffee-dnu-project-main\src\main\java\net\javaguides\springboot" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\clone\sales-coffee-dnu-project\sales-coffee-dnu-project\src\main\resources\static\js" />
       <recent name="D:\Команда\sales-coffee-dnu-project-main\src\main\java\net\javaguides\springboot\config" />
       <recent name="C:\Users\zzaha\Documents\GitHub\sales-coffee-dnu-project 1\src\main\resources\templates" />
       <recent name="C:\Users\zzaha\Documents\GitHub\sales-coffee-dnu-project 1\src\main\resources\static" />
       <recent name="C:\Users\zzaha\Documents\GitHub\sales-coffee-dnu-project 1\dist" />
-      <recent name="C:\Users\zzaha\Documents\GitHub\sales-coffee-dnu-project\src\main\resources\templates" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="net.javaguides.springboot" />
@@ -174,6 +162,11 @@
       <workItem from="1696481612515" duration="5833000" />
       <workItem from="1696500712170" duration="16000" />
       <workItem from="1696500897297" duration="124000" />
+      <workItem from="1696625117938" duration="1201000" />
+      <workItem from="1696687141752" duration="16345000" />
+      <workItem from="1696716096855" duration="1601000" />
+      <workItem from="1696961754270" duration="193000" />
+      <workItem from="1696961987012" duration="362000" />
     </task>
     <servers />
   </component>

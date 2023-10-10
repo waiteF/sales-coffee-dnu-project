@@ -1,130 +1,123 @@
 "use strict";
+// Login Interaction
+const loginBtn = document.querySelector("#login-btn");
+const signUpBtn = document.querySelector("#sign-up-btn");
+const usernameIn = document.querySelector("#userid");
+const emailIn = document.querySelector("#emailid");
+const usernameOut = document.querySelector("#username-display");
+const usernameOutNavBar = document.querySelector(".sign-in");
+const signUpNavBar = document.querySelector(".sign-up");
+const slashNavBar = document.querySelector("#slash");
+const passwordIn = document.querySelector("#pswrd");
+const loginForm = document.querySelector("#login-form");
 
-//НЕ ПРАЦЮЄ!!!!!!!
+function checkUsername() {
+  let password = passwordIn.value;
+  if (usernameIn.value === "") {
+    usernameOut.innerHTML = "Please enter a username.";
+  } else if (password.length < 8) {
+    usernameOut.innerHTML =
+      "Please enter a password that is at least 8 character long.";
+  } else {
+    Storage.setUsername(usernameIn.value);
+    location.reload();
+    if (usernameIn.value == "E-commerce") {
+      window.open("https://lchua2314.github.io/E-commerce-Website/index.html");
+      alert("Thanks for looking at the code! :)");
+    }
+  }
+}
 
-// // Login Interaction
-// const loginBtn = document.querySelector("#login-btn");
-// const signUpBtn = document.querySelector("#sign-up-btn");
-// const usernameIn = document.querySelector("#userid");
-// const emailIn = document.querySelector("#emailid");
-// const usernameOut = document.querySelector("#username-display");
-// const usernameOutNavBar = document.querySelector(".sign-in");
-// const signUpNavBar = document.querySelector(".sign-up");
-// const slashNavBar = document.querySelector("#slash");
-// const passwordIn = document.querySelector("#pswrd");
-// const loginForm = document.querySelector("#login-form");
+function createNewUsername() {
+  let password = passwordIn.value,
+    email = emailIn.value;
+  if (!validateEmail(email)) {
+    usernameOut.innerHTML = "Please enter a valid email address.";
+  } else if (usernameIn.value === "") {
+    usernameOut.innerHTML = "Please enter a username.";
+  } else if (password.length < 8) {
+    usernameOut.innerHTML =
+      "Please enter a password that is at least 8 character long.";
+  } else {
+    Storage.setUsername(usernameIn.value);
+    location.reload();
+  }
+}
 
-// function checkUsername() {
-//   let password = passwordIn.value;
-//   if (usernameIn.value === "") {
-//     usernameOut.innerHTML = "Please enter a username.";
-//     console.log(localStorage);
-//   } else if (password.length < 8) {
-//     usernameOut.innerHTML =
-//       "Please enter a password that is at least 8 character long.";
-//   } else {
-//     Storage.setUsername(usernameIn.value);
-//     location.reload();
-//     if (usernameIn.value == "E-commerce") {
-//       window.open("https://lchua2314.github.io/E-commerce-Website/index.html");
-//       alert("Thanks for looking at the code! :)");
-//     }
-//   }
-// }
+function validateEmail(inputEmail) {
+  const regex =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return regex.test(String(inputEmail).toLowerCase());
+}
 
-// function createNewUsername() {
-//   let password = passwordIn.value,
-//     email = emailIn.value;
-//   if (!validateEmail(email)) {
-//     usernameOut.innerHTML = "Please enter a valid email address.";
-//   } else if (usernameIn.value === "") {
-//     usernameOut.innerHTML = "Please enter a username.";
-//   } else if (password.length < 8) {
-//     usernameOut.innerHTML =
-//       "Please enter a password that is at least 8 character long.";
-//   } else {
-//     Storage.setUsername(usernameIn.value);
-//     location.reload();
-//   }
-// }
+class Storage {
+  static setUsername(inputUsername) {
+    localStorage.setItem("username", inputUsername);
+  }
+  static getUsername() {
+    return localStorage.getItem("username");
+  }
+  static setPassword(inputPassword) {
+    localStorage.setItem("password", inputPassword);
+  }
+  static getPassword() {
+    return localStorage.getItem("password");
+  }
+  static setAmount(itemName, itemAmount) {
+    localStorage.setItem(itemName, itemAmount.toString());
+  }
+  static removeAmount(itemName) {
+    localStorage.removeItem(itemName);
+  }
+}
 
-// function validateEmail(inputEmail) {
-//   const regex =
-//     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-//   return regex.test(String(inputEmail).toLowerCase());
-// }
+let currUser = Storage.getUsername();
+if (currUser) {
+  usernameOutNavBar.innerHTML = '<i class="fas fa-user"></i> ' + currUser;
+  signUpNavBar.innerHTML = "";
+  slashNavBar.innerHTML = "";
+  if (loginForm) {
+    loginForm.innerHTML = "";
+    usernameOut.innerHTML =
+      'Currently logged in as: <br> <i class="fas fa-user"></i> ' + currUser;
+  }
+}
 
-// class Storage {
-//   static setUsername(inputUsername) {
-//     localStorage.setItem("username", inputUsername);
-//   }
-//   static getUsername() {
-//     return localStorage.getItem("username");
-//   }
-//   static setPassword(inputPassword) {
-//     localStorage.setItem("password", inputPassword);
-//   }
-//   static getPassword() {
-//     return localStorage.getItem("password");
-//   }
-//   static setAmount(itemName, itemAmount) {
-//     localStorage.setItem(itemName, itemAmount.toString());
-//   }
-//   static removeAmount(itemName) {
-//     localStorage.removeItem(itemName);
-//   }
-// }
+if (loginBtn) {
+  if (!currUser) {
+    loginBtn.addEventListener("click", checkUsername);
+    loginForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+    });
+  } else {
+    loginBtn.innerHTML = "Sign Out";
+    loginBtn.addEventListener("click", () => {
+      localStorage.removeItem("username");
+      location.reload();
+    });
+    loginForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+    });
+  }
+}
 
-// let currUser = Storage.getUsername();
-// if (currUser) {
-//   usernameOutNavBar.innerHTML = '<i class="fas fa-user"></i> ' + currUser;
-//   signUpNavBar.innerHTML = "";
-//   slashNavBar.innerHTML = "";
-//   if (loginForm) {
-//     loginForm.innerHTML = "";
-//     usernameOut.innerHTML =
-//       'Наразі увійшов як: <br> <i class="fas fa-user"></i> ' + currUser;
-//   }
-// }
-
-// if (loginBtn) {
-//   if (!currUser) {
-//     loginBtn.addEventListener("click", checkUsername);
-//     loginForm.addEventListener("submit", (event) => {
-//       console.log("currUser");
-//       event.preventDefault();
-//     });
-//   } else {
-//     loginBtn.innerHTML = "Sign Out";
-//     loginBtn.addEventListener("click", () => {
-//       localStorage.removeItem("username");
-//       location.reload();
-//       console.log("currUser");
-//     });
-//     loginForm.addEventListener("submit", (event) => {
-//       console.log("currUser");
-//       event.preventDefault();
-//     });
-//   }
-// }
-
-// if (signUpBtn) {
-//   if (!currUser) {
-//     signUpBtn.addEventListener("click", createNewUsername);
-//     loginForm.addEventListener("submit", (event) => {
-//       event.preventDefault();
-//     });
-//   } else {
-//     signUpBtn.innerHTML = "Sign Out";
-//     signUpBtn.addEventListener("click", () => {
-//       localStorage.removeItem("username");
-//       location.reload();
-//     });
-//     loginForm.addEventListener("submit", (event) => {
-//       event.preventDefault();
-//     });
-//   }
-// }
+if (signUpBtn) {
+  if (!currUser) {
+    signUpBtn.addEventListener("click", createNewUsername);
+    loginForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+    });
+  } else {
+    signUpBtn.innerHTML = "Sign Out";
+    signUpBtn.addEventListener("click", () => {
+      localStorage.removeItem("username");
+      location.reload();
+    });
+    loginForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+    });
+  }
+}
 
 // Navbar Mobile
 const menuBtn = document.querySelector(".menu-btn");
@@ -132,7 +125,6 @@ const hamburger = document.querySelector(".menu-btn__burger");
 const nav = document.querySelector(".nav");
 const menuNav = document.querySelector(".menu-nav");
 const navItems = document.querySelectorAll(".menu-nav__item");
-const regItems = document.querySelector(".register");
 
 let showMenu = false;
 
@@ -143,7 +135,6 @@ function toggleMenu() {
     hamburger.classList.add("open");
     nav.classList.add("open");
     menuNav.classList.add("open");
-    regItems.classList.add("open");
     html.classList.add("no-scroll");
     navItems.forEach((item) => item.classList.add("open"));
 
@@ -152,7 +143,6 @@ function toggleMenu() {
     hamburger.classList.remove("open");
     nav.classList.remove("open");
     menuNav.classList.remove("open");
-    regItems.classList.remove("open");
     html.classList.remove("no-scroll");
     navItems.forEach((item) => item.classList.remove("open"));
 
@@ -181,15 +171,15 @@ cartCloseBtn.addEventListener("click", function () {
 
 // Shopping Cart Adding Items to Cart
 const total = document.querySelector(".total");
-let totalAmount;
+let totalAmount = 0;
 
-// Establish totalAmount in local storage if not there already.
-if (!localStorage.getItem("total")) {
-  localStorage.setItem("total", "0");
-} else {
-  totalAmount = parseFloat(localStorage.getItem("total"));
-  updateTotal(0);
-}
+// // Establish totalAmount in local storage if not there already.
+// if (!localStorage.getItem("total")) {
+//   localStorage.setItem("total", "0");
+// } else {
+//   totalAmount = parseFloat(localStorage.getItem("total"));
+//   updateTotal(0);
+// }
 
 /**
  * Updates total in the local storage and class "total" in the DOM
@@ -199,14 +189,15 @@ function updateTotal(moneyChange) {
   totalAmount += moneyChange;
   localStorage.setItem("total", totalAmount.toString());
   if (totalAmount > 1) {
-    total.innerHTML = `<span class="span-primary">Загальна сума: </span> $${totalAmount.toFixed(
+    total.innerHTML = `<span class="span-primary">Total Amount:</span> $${totalAmount.toFixed(
       2
     )}`;
   } else {
     total.innerHTML = `<br>
-    <br>
-    Ваш кошик покупок порожній. <br>
-      Додайте товари до кошика, наводячи курсор на / натискаючи на зображення продуктів на сторінці Меню.`;
+      <br>
+      Your Shopping Cart is empty. <br>
+        Add items to cart by hovering over / tapping on the images of products
+    on the Menu page.`;
   }
 }
 
@@ -560,11 +551,11 @@ function checkStorageForCart() {
  */
 function initializeItem1() {
   item1Display.innerHTML += `<div class="one1-cart-item">
-  <img src="../img/caffe-americano.jpg" alt="продукт" />
+  <img src="../img/caffe-americano.jpg" alt="product" />
     <div>
-      <h3><span class="span-primary">Кава Американо</span></h3>
+      <h3><span class="span-primary">Caffè</span> Americano</h3>
       <h4>$2.10</h4>
-      <span class="remove-item-1">Видалити</span>
+      <span class="remove-item-1">Remove</span>
     </div>
     <div>
       <div class="item1Up">
@@ -575,8 +566,7 @@ function initializeItem1() {
       <i class="fas fa-chevron-down"></i>
       </div>
     </div>
-</div>`;
-
+          </div >`;
   item1Amount = document.querySelector(".item-amount1");
   up1 = document.querySelector(".item1Up");
   down1 = document.querySelector(".item1Down");
@@ -615,11 +605,11 @@ function initializeItem1() {
  */
 function initializeItem2() {
   item2Display.innerHTML += `<div class="two2-cart-item">
-  <img src="../img/caffe-misto.jpg" alt="продукт" />
+  <img src="../img/caffe-misto.jpg" alt="product" />
     <div>
-      <h3><span class="span-primary">Кава Місто</span></h3>
+      <h3><span class="span-primary">Caffè</span> Misto</h3>
       <h4>$2.60</h4>
-      <span class="remove-item-2">Видалити</span>
+      <span class="remove-item-2">Remove</span>
     </div>
     <div>
       <div class="item2Up">
@@ -630,8 +620,7 @@ function initializeItem2() {
       <i class="fas fa-chevron-down"></i>
       </div>
     </div>
-</div>`;
-
+          </div >`;
   item2Amount = document.querySelector(".item-amount2");
   up2 = document.querySelector(".item2Up");
   down2 = document.querySelector(".item2Down");
@@ -670,11 +659,11 @@ function initializeItem2() {
  */
 function initializeItem3() {
   item3Display.innerHTML += `<div class="three3-cart-item">
-  <img src="../img/caffe-americano.jpg" alt="продукт" />
+  <img src="../img/caffe-americano.jpg" alt="product" />
     <div>
-      <h3><span class="span-primary">Блонд Кафе Амерікано</span></h3>
+      <h3><span class="span-primary">Blonde Caffè</span> Americano</h3>
       <h4>$2.79</h4>
-      <span class="remove-item-3">Видалити</span>
+      <span class="remove-item-3">Remove</span>
     </div>
     <div>
       <div class="item3Up">
@@ -685,8 +674,7 @@ function initializeItem3() {
       <i class="fas fa-chevron-down"></i>
       </div>
     </div>
-</div>`;
-
+          </div >`;
   item3Amount = document.querySelector(".item-amount3");
   up3 = document.querySelector(".item3Up");
   down3 = document.querySelector(".item3Down");
@@ -725,11 +713,11 @@ function initializeItem3() {
  */
 function initializeItem4() {
   item4Display.innerHTML += `<div class="four4-cart-item">
-  <img src="../img/dark-roast-coffee.jpg" alt="продукт" />
+  <img src="../img/dark-roast-coffee.jpg" alt="product" />
     <div>
-      <h3><span class="span-primary">Кава світлого обсмаження</span></h3>
+      <h3><span class="span-primary">Blonde</span> Roast</h3>
       <h4>$2.05</h4>
-      <span class="remove-item-4">Видалити</span>
+      <span class="remove-item-4">Remove</span>
     </div>
     <div>
       <div class="item4Up">
@@ -740,8 +728,7 @@ function initializeItem4() {
       <i class="fas fa-chevron-down"></i>
       </div>
     </div>
-</div>`;
-
+          </div >`;
   item4Amount = document.querySelector(".item-amount4");
   up4 = document.querySelector(".item4Up");
   down4 = document.querySelector(".item4Down");
@@ -780,11 +767,11 @@ function initializeItem4() {
  */
 function initializeItem5() {
   item5Display.innerHTML += `<div class="five5-cart-item">
-  <img src="../img/dark-roast-coffee.jpg" alt="продукт" />
+  <img src="../img/dark-roast-coffee.jpg" alt="product" />
     <div>
-      <h3><span class="span-primary">Кава темного обсмаження</span></h3>
+      <h3><span class="span-primary">Dark Roast</span> Coffee</h3>
       <h4>$2.20</h4>
-      <span class="remove-item-5">Видалити</span>
+      <span class="remove-item-5">Remove</span>
     </div>
     <div>
       <div class="item5Up">
@@ -795,8 +782,7 @@ function initializeItem5() {
       <i class="fas fa-chevron-down"></i>
       </div>
     </div>
-</div>`;
-
+          </div >`;
   item5Amount = document.querySelector(".item-amount5");
   up5 = document.querySelector(".item5Up");
   down5 = document.querySelector(".item5Down");
@@ -835,11 +821,11 @@ function initializeItem5() {
  */
 function initializeItem6() {
   item6Display.innerHTML += `<div class="six6-cart-item">
-  <img src="../img/dark-roast-coffee.jpg" alt="продукт" />
+  <img src="../img/dark-roast-coffee.jpg" alt="product" />
     <div>
-      <h3><span class="span-primary">Кава Pike Place®</span> Roast</h3>
+      <h3><span class="span-primary">Pike Place®</span> Roast</h3>
       <h4>$2.80</h4>
-      <span class="remove-item-6">Видалити</span>
+      <span class="remove-item-6">Remove</span>
     </div>
     <div>
       <div class="item6Up">
@@ -850,8 +836,7 @@ function initializeItem6() {
       <i class="fas fa-chevron-down"></i>
       </div>
     </div>
-</div>`;
-
+          </div >`;
   item6Amount = document.querySelector(".item-amount6");
   up6 = document.querySelector(".item6Up");
   down6 = document.querySelector(".item6Down");
@@ -890,11 +875,11 @@ function initializeItem6() {
  */
 function initializeItem7() {
   item7Display.innerHTML += `<div class="seven7-cart-item">
-  <img src="../img/dark-roast-coffee.jpg" alt="продукт" />
+  <img src="../img/dark-roast-coffee.jpg" alt="product" />
     <div>
-      <h3><span class="span-primary">Кава Decaf Pike Place® Roast</span></h3>
+      <h3><span class="span-primary">Decaf Pike </span>Place® Roast</h3>
       <h4>$2.25</h4>
-      <span class="remove-item-7">Видалити</span>
+      <span class="remove-item-7">Remove</span>
     </div>
     <div>
       <div class="item7Up">
@@ -905,8 +890,7 @@ function initializeItem7() {
       <i class="fas fa-chevron-down"></i>
       </div>
     </div>
-</div>`;
-
+          </div >`;
   item7Amount = document.querySelector(".item-amount7");
   up7 = document.querySelector(".item7Up");
   down7 = document.querySelector(".item7Down");
@@ -945,11 +929,11 @@ function initializeItem7() {
  */
 function initializeItem8() {
   item8Display.innerHTML += `<div class="eight8-cart-item">
-  <img src="../img/cappuccino.jpg" alt="продукт" />
+  <img src="../img/cappuccino.jpg" alt="product" />
     <div>
-      <h3><span class="span-primary">Капучіно</span></h3>
+      <h3><span class="span-primary">Cappu</span>ccino</h3>
       <h4>$2.59</h4>
-      <span class="remove-item-8">Видалити</span>
+      <span class="remove-item-8">Remove</span>
     </div>
     <div>
       <div class="item8Up">
@@ -960,8 +944,7 @@ function initializeItem8() {
       <i class="fas fa-chevron-down"></i>
       </div>
     </div>
-</div>`;
-
+          </div >`;
   item8Amount = document.querySelector(".item-amount8");
   up8 = document.querySelector(".item8Up");
   down8 = document.querySelector(".item8Down");
@@ -1000,11 +983,11 @@ function initializeItem8() {
  */
 function initializeItem9() {
   item9Display.innerHTML += `<div class="nine9-cart-item">
-  <img src="../img/cappuccino.jpg" alt="продукт" />
+  <img src="../img/cappuccino.jpg" alt="product" />
     <div>
-      <h3><span class="span-primary">Блонд</span> Капучіно</h3>
+      <h3><span class="span-primary">Blonde</span> Cappuccino</h3>
       <h4>$2.34</h4>
-      <span class="remove-item-9">Видалити</span>
+      <span class="remove-item-9">Remove</span>
     </div>
     <div>
       <div class="item9Up">
@@ -1015,8 +998,7 @@ function initializeItem9() {
       <i class="fas fa-chevron-down"></i>
       </div>
     </div>
-</div>`;
-
+          </div >`;
   item9Amount = document.querySelector(".item-amount9");
   up9 = document.querySelector(".item9Up");
   down9 = document.querySelector(".item9Down");
@@ -1055,11 +1037,11 @@ function initializeItem9() {
  */
 function initializeItem10() {
   item10Display.innerHTML += `<div class="ten10-cart-item">
-  <img src="../img/espresso.jpg" alt="продукт" />
+  <img src="../img/espresso.jpg" alt="product" />
     <div>
-      <h3><span class="span-primary">Еспр</span>ресо</h3>
+      <h3><span class="span-primary">Espr</span>esso</h3>
       <h4>$2.89</h4>
-      <span class="remove-item-10">Видалити</span>
+      <span class="remove-item-10">Remove</span>
     </div>
     <div>
       <div class="item10Up">
@@ -1070,8 +1052,7 @@ function initializeItem10() {
       <i class="fas fa-chevron-down"></i>
       </div>
     </div>
-</div>`;
-
+          </div >`;
   item10Amount = document.querySelector(".item-amount10");
   up10 = document.querySelector(".item10Up");
   down10 = document.querySelector(".item10Down");
@@ -1110,11 +1091,11 @@ function initializeItem10() {
  */
 function initializeItem11() {
   item11Display.innerHTML += `<div class="eleven11-cart-item">
-  <img src="../img/espresso-macchiato.jpg" alt="продукт" />
+  <img src="../img/espresso-macchiato.jpg" alt="product" />
     <div>
-      <h3><span class="span-primary">Еспресо</span> Макіато</h3>
+      <h3><span class="span-primary">Espresso</span> Macchiato</h3>
       <h4>$2.18</h4>
-      <span class="remove-item-11">Видалити</span>
+      <span class="remove-item-11">Remove</span>
     </div>
     <div>
       <div class="item11Up">
@@ -1125,8 +1106,7 @@ function initializeItem11() {
       <i class="fas fa-chevron-down"></i>
       </div>
     </div>
-</div>`;
-
+          </div >`;
   item11Amount = document.querySelector(".item-amount11");
   up11 = document.querySelector(".item11Up");
   down11 = document.querySelector(".item11Down");
@@ -1165,11 +1145,11 @@ function initializeItem11() {
  */
 function initializeItem12() {
   item12Display.innerHTML += `<div class="twelve12-cart-item">
-  <img src="../img/flat-white.jpg" alt="продукт" />
+  <img src="../img/flat-white.jpg" alt="product" />
     <div>
-      <h3><span class="span-primary">Флет</span> Вайт</h3>
+      <h3><span class="span-primary">Flat</span> White</h3>
       <h4>$2.75</h4>
-      <span class="remove-item-12">Видалити</span>
+      <span class="remove-item-12">Remove</span>
     </div>
     <div>
       <div class="item12Up">
@@ -1180,7 +1160,7 @@ function initializeItem12() {
       <i class="fas fa-chevron-down"></i>
       </div>
     </div>
-</div>`;
+          </div >`;
   item12Amount = document.querySelector(".item-amount12");
   up12 = document.querySelector(".item12Up");
   down12 = document.querySelector(".item12Down");
@@ -1212,20 +1192,3 @@ function initializeItem12() {
     Storage.removeAmount("item12");
   });
 }
-
-// my adds
-
-const stickyElement = document.querySelector(".second-header");
-const parentElement = document.querySelector("body"); // Родитель элемента, который имеет overflow
-
-window.addEventListener("scroll", () => {
-  const scrollY = window.scrollY;
-  const parentTop = parentElement.getBoundingClientRect().top;
-
-  if (scrollY > parentTop) {
-    stickyElement.style.position = "fixed";
-    stickyElement.style.top = "0";
-  } else {
-    stickyElement.style.position = "static";
-  }
-});

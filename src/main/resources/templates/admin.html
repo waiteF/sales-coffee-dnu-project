@@ -100,7 +100,7 @@
 
       <div class="col-sm-1">
         <a th:if="${currentPage < totalPages}"
-           th:href="@{'/admin/page/' + ${totalPages}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">Останній</a>
+           th:href="@{'/admin/page/' + ${totalPages}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">Останній</a><br>
         <span th:unless="${currentPage < totalPages}">Останній</span>
       </div>
     </div>
