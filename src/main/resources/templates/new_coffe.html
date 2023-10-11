@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk_UA" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Система управління записами з меню</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <h1>Система управління записами з меню</h1>
+    <hr>
+    <h2>Зберегти </h2>
+
+    <form action="#" th:action="@{/admin/saveCoffe}" th:object="${coffe}"
+          method="POST">
+
+        <input type="text" th:field="*{name}" placeholder="Назва кави" class="form-control mb-4 col-4" required="required">
+        <input type="text" pattern="[0-9]+(\.[0-9]+)?" th:field="*{delivery_price}" placeholder="Ціна за поставку" class="form-control mb-4 col-4" required="required">
+        <input type="text" pattern="[0-9]+(\.[0-9]+)?" th:field="*{selling_price}" placeholder="Ціна за продаж" class="form-control mb-4 col-4" required="required">
+        <input type="number" th:field="*{quantity}" placeholder="Кількість одиниць товару" class="form-control mb-4 col-4" required="required">
+        <input type="text" pattern="[0-9]+(\.[0-9]+)?" th:field="*{net_weight}" placeholder="Маса нетто" class="form-control mb-4 col-4" required="required">
+        <input type="text" th:field="*{type}" placeholder="Вид кави" class="form-control mb-4 col-4" required="required">
+        <input type="text" th:field="*{producer}" placeholder="Виробник" class="form-control mb-4 col-4" required="required">
+        <input type="text" th:field="*{coffee_compos}" placeholder="Склад кави" class="form-control mb-4 col-4" required="required">
+        <input type="text" th:field="*{image}" placeholder="Зображення" class="form-control mb-4 col-4" required="required">
+
+        <button type="submit" class="btn btn-info col-2"> Зберегти </button>
+    </form>
+
+    <hr>
+
+    <a th:href="@{/admin}">Повернутись</a>
+</div>
+</body>
+</html>
