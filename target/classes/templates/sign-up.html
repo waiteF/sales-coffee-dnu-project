@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Drip Cafe - Увійти</title>
+  <title>Kings cafe - Зареєструватися</title>
   <link rel="stylesheet" href="../static/scss/main.css" />
   <link
           href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Marck+Script&display=swap"
@@ -51,10 +51,11 @@
 
       <nav class="nav">
         <ul class="menu-nav">
+          <li class="menu-nav__item"></li>
           <li class="menu-nav__item">
             <a href="index" class="logo menu-nav__link">
               <img src="../static/img/favicon.png" />
-              <span class="logo-first">Drip</span>
+              <span class="logo-first">Kings</span>
               <span class="logo-last">Cafe</span>
             </a>
           </li>
@@ -130,7 +131,12 @@
 
   <main class="main">
     <div class="sign-all">
-      <form class="form" th:action="@{/sign-up}" method="post" th:object="${user}">
+      <form
+              class="form"
+              th:action="@{/sign-up}"
+              method="post"
+              th:object="${user}"
+      >
         <div class="flex-column">
           <label>Логін</label>
         </div>
@@ -138,13 +144,18 @@
           <input
                   placeholder="Введіть Ваше ім'я"
                   class="input"
-                  type="text" id="firstName" th:field="*{firstName}"
-          />  </div>
+                  type="text"
+                  id="firstName"
+                  th:field="*{firstName}"
+          />
+        </div>
         <div class="inputForm">
           <input
                   placeholder="Введіть Ваше прізвище"
                   class="input"
-                  type="text" id="lastName"  th:field="*{lastName}"
+                  type="text"
+                  id="lastName"
+                  th:field="*{lastName}"
           />
         </div>
         <div class="flex-column">
@@ -156,7 +167,6 @@
                   width="20"
                   viewBox="0 0 32 32"
                   height="20"
-
           >
             <g data-name="Layer 3" id="Layer_3">
               <path
@@ -168,7 +178,8 @@
                   placeholder="Введіть Вашу почту"
                   class="input"
                   type="text"
-                  id="email"  th:field="*{email}"
+                  id="email"
+                  th:field="*{email}"
           />
         </div>
 
@@ -218,7 +229,7 @@
           />
         </div>
 
-        <button class="button-submit " >Зареєструватися</button>
+        <button class="button-submit">Зареєструватися</button>
         <p class="p">
           Вже є обліковий запис?
           <a href="sign-in" class="span">Увійти</a>
@@ -226,7 +237,7 @@
         <p class="p line">Або</p>
         <div class="main2">
           <div class="up">
-            <button class="card1 ">
+            <button class="card1">
               <svg
                       xmlns="http://www.w3.org/2000/svg"
                       xmlns:xlink="http://www.w3.org/1999/xlink"

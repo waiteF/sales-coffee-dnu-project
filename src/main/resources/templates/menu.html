@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Кав'ярня "Drip" - Меню</title>
+  <title>Кав'ярня "Kings cafe" - Меню</title>
   <link rel="stylesheet" href="../static/scss/main.css" />
   <link
           href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Marck+Script&display=swap"
@@ -52,7 +52,7 @@
         <li class="menu-nav__item">
           <a href="index" class="logo menu-nav__link">
             <img src="../static/img/favicon.png" />
-            <span class="logo-first">Drip</span>
+            <span class="logo-first">Kings</span>
             <span class="logo-last">Cafe</span>
           </a>
         </li>
@@ -97,49 +97,185 @@
 
   <main class="products">
     <div class="grid">
-      <div th:each="coffee : ${coffees}">
-        <div class="box">
-          <div class="img-container">
-            <img th:src="@{../static/img/{image}(image=${coffee.image})}" alt="Coffee" />
-
-            <!-- Используем условия для определения, какие ссылки отображать -->
-            <div class="box__btns">
-              <a th:if="${coffee.id == 1}" href="#!" class="box__btn one__view__openBtn">Переглянути</a>
-              <a th:if="${coffee.id == 1}" href="#!" class="box__btn one__cart__button">Додати до кошика</a>
-              <a th:if="${coffee.id == 2}" href="#!" class="box__btn two__view__openBtn">Переглянути</a>
-              <a th:if="${coffee.id == 2}" href="#!" class="box__btn two__cart__button">Додати до кошика</a>
-              <a th:if="${coffee.id == 3}" href="#!" class="box__btn three__view__openBtn">Переглянути</a>
-              <a th:if="${coffee.id == 3}" href="#!" class="box__btn three__cart__button">Додати до кошика</a>
-              <a th:if="${coffee.id == 4}" href="#!" class="box__btn four__view__openBtn">Переглянути</a>
-              <a th:if="${coffee.id == 4}" href="#!" class="box__btn four__cart__button">Додати до кошика</a>
-              <a th:if="${coffee.id == 5}" href="#!" class="box__btn five__view__openBtn">Переглянути</a>
-              <a th:if="${coffee.id == 5}" href="#!" class="box__btn five__cart__button">Додати до кошика</a>
-              <a th:if="${coffee.id == 6}" href="#!" class="box__btn six__view__openBtn">Переглянути</a>
-              <a th:if="${coffee.id == 6}" href="#!" class="box__btn six__cart__button">Додати до кошика</a>
-              <a th:if="${coffee.id == 7}" href="#!" class="box__btn seven__view__openBtn">Переглянути</a>
-              <a th:if="${coffee.id == 7}" href="#!" class="box__btn seven__cart__button">Додати до кошика</a>
-              <a th:if="${coffee.id == 8}" href="#!" class="box__btn eight__view__openBtn">Переглянути</a>
-              <a th:if="${coffee.id == 8}" href="#!" class="box__btn eight__cart__button">Додати до кошика</a>
-              <a th:if="${coffee.id == 9}" href="#!" class="box__btn nine__view__openBtn">Переглянути</a>
-              <a th:if="${coffee.id == 9}" href="#!" class="box__btn nine__cart__button">Додати до кошика</a>
-              <a th:if="${coffee.id == 10}" href="#!" class="box__btn ten__view__openBtn">Переглянути</a>
-              <a th:if="${coffee.id == 10}" href="#!" class="box__btn ten__cart__button">Додати до кошика</a>
-              <a th:if="${coffee.id == 11}" href="#!" class="box__btn eleven__view__openBtn">Переглянути</a>
-              <a th:if="${coffee.id == 11}" href="#!" class="box__btn eleven__cart__button">Додати до кошика</a>
-              <a th:if="${coffee.id == 12}" href="#!" class="box__btn twelve__view__openBtn">Переглянути</a>
-              <a th:if="${coffee.id == 12}" href="#!" class="box__btn twelve__cart__button">Додати до кошика</a>
-
-            </div>
+      <div class="box">
+        <div class="img-container">
+          <img src="../static/img/caffe-americano.jpg" alt="Кава Американо" />
+          <div class="box__btns">
+            <a href="#!" class="box__btn one__view__openBtn"> Переглянути </a>
+            <a href="#!" class="box__btn one__cart__button">
+              Додати до кошика
+            </a>
           </div>
-          <h2 th:text="${coffee.name}"></h2>
-          <h3 th:text="${coffee.selling_price}"></h3>
         </div>
+        <h2>Кава Американо</h2>
+        <h3>$2.10</h3>
+      </div>
+      <div class="box">
+        <div class="img-container">
+          <img src="../static/img/caffe-misto.jpg" alt="Кава Місто" />
+          <div class="box__btns">
+            <a href="#!" class="box__btn two__view__openBtn"> Переглянути </a>
+            <a href="#!" class="box__btn two__cart__button">
+              Додати до кошика
+            </a>
+          </div>
+        </div>
+        <h2>Кава Місто</h2>
+        <h3>$2.60</h3>
+      </div>
+      <div class="box">
+        <div class="img-container">
+          <img src="../static/img/caffe-americano.jpg" alt="Світла Кава Американо" />
+          <div class="box__btns">
+            <a href="#!" class="box__btn three__view__openBtn">
+              Переглянути
+            </a>
+            <a href="#!" class="box__btn three__cart__button">
+              Додати до кошика
+            </a>
+          </div>
+        </div>
+        <h2>Світла Кава Американо</h2>
+        <h3>$2.79</h3>
+      </div>
+      <div class="box">
+        <div class="img-container">
+          <img src="../static/img/dark-roast-coffee.jpg" alt="Світла Кава Ростер" />
+          <div class="box__btns">
+            <a href="#!" class="box__btn four__view__openBtn">
+              Переглянути
+            </a>
+            <a href="#!" class="box__btn four__cart__button">
+              Додати до кошика
+            </a>
+          </div>
+        </div>
+        <h2>Світла Кава Ростер</h2>
+        <h3>$2.05</h3>
+      </div>
+      <div class="box">
+        <div class="img-container">
+          <img src="../static/img/dark-roast-coffee.jpg" alt="Кава Темний Ростер" />
+          <div class="box__btns">
+            <a href="#!" class="box__btn five__view__openBtn">
+              Переглянути
+            </a>
+            <a href="#!" class="box__btn five__cart__button">
+              Додати до кошика
+            </a>
+          </div>
+        </div>
+        <h2>Кава Темний Ростер</h2>
+        <h3>$2.20</h3>
+      </div>
+      <div class="box">
+        <div class="img-container">
+          <img
+                  src="../static/img/dark-roast-coffee.jpg"
+                  alt="Кава Пайк Плейс® Ростер"
+          />
+          <div class="box__btns">
+            <a href="#!" class="box__btn six__view__openBtn"> Переглянути </a>
+            <a href="#!" class="box__btn six__cart__button">
+              Додати до кошика
+            </a>
+          </div>
+        </div>
+        <h2>Кава Пайк Плейс® Ростер</h2>
+        <h3>$2.80</h3>
+      </div>
+      <div class="box">
+        <div class="img-container">
+          <img
+                  src="../static/img/dark-roast-coffee.jpg"
+                  alt="Безкофеїнова Кава Пайк Плейс® Ростер"
+          />
+          <div class="box__btns">
+            <a href="#!" class="box__btn seven__view__openBtn">
+              Переглянути
+            </a>
+            <a href="#!" class="box__btn seven__cart__button">
+              Додати до кошика
+            </a>
+          </div>
+        </div>
+        <h2>Безкофеїнова Кава Пайк Плейс® Ростер</h2>
+        <h3>$2.25</h3>
+      </div>
+      <div class="box">
+        <div class="img-container">
+          <img src="../static/img/cappuccino.jpg" alt="Капучино" />
+          <div class="box__btns">
+            <a href="#!" class="box__btn eight__view__openBtn">
+              Переглянути
+            </a>
+            <a href="#!" class="box__btn eight__cart__button">
+              Додати до кошика
+            </a>
+          </div>
+        </div>
+        <h2>Капучино</h2>
+        <h3>$2.59</h3>
+      </div>
+      <div class="box">
+        <div class="img-container">
+          <img src="../static/img/cappuccino.jpg" alt="Світле Капучино" />
+          <div class="box__btns">
+            <a href="#!" class="box__btn nine__view__openBtn">
+              Переглянути
+            </a>
+            <a href="#!" class="box__btn nine__cart__button">
+              Додати до кошика
+            </a>
+          </div>
+        </div>
+        <h2>Світле Капучино</h2>
+        <h3>$2.34</h3>
+      </div>
+      <div class="box">
+        <div class="img-container">
+          <img src="../static/img/espresso.jpg" alt="Еспресо" />
+          <div class="box__btns">
+            <a href="#!" class="box__btn ten__view__openBtn"> Переглянути </a>
+            <a href="#!" class="box__btn ten__cart__button">
+              Додати до кошика
+            </a>
+          </div>
+        </div>
+        <h2>Еспресо</h2>
+        <h3>$2.89</h3>
+      </div>
+      <div class="box">
+        <div class="img-container">
+          <img src="../static/img/espresso-macchiato.jpg" alt="Еспресо Макіато" />
+          <div class="box__btns">
+            <a href="#!" class="box__btn eleven__view__openBtn">
+              Переглянути
+            </a>
+            <a href="#!" class="box__btn eleven__cart__button">
+              Додати до кошика
+            </a>
+          </div>
+        </div>
+        <h2>Еспресо Макіато</h2>
+        <h3>$2.18</h3>
+      </div>
+      <div class="box">
+        <div class="img-container">
+          <img src="../static/img/flat-white.jpg" alt="Флат Вайт" />
+          <div class="box__btns">
+            <a href="#!" class="box__btn twelve__view__openBtn">
+              Переглянути
+            </a>
+            <a href="#!" class="box__btn twelve__cart__button">
+              Додати до кошика
+            </a>
+          </div>
+        </div>
+        <h2>Флат Вайт</h2>
+        <h3>$2.75</h3>
       </div>
     </div>
-  </main>
-
-
-  </div>
     <header>
       <div class="details">
         <!-- Вид 1: Кава Американо -->

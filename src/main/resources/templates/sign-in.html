@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Drip Cafe - Увійти</title>
+  <title>Kings cafe - Увійти</title>
   <link rel="stylesheet" href="../static/scss/main.css" />
   <link
           href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Marck+Script&display=swap"
-          rel="stylesheet"	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          rel="stylesheet"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
           crossorigin="anonymous"
   />
   <link rel="icon" href="../static/img/favicon.png" />
@@ -50,10 +51,11 @@
 
       <nav class="nav">
         <ul class="menu-nav">
+          <li class="menu-nav__item"></li>
           <li class="menu-nav__item">
             <a href="index" class="logo menu-nav__link">
               <img src="../static/img/favicon.png" />
-              <span class="logo-first">Drip</span>
+              <span class="logo-first">Kings</span>
               <span class="logo-last">Cafe</span>
             </a>
           </li>
@@ -129,8 +131,7 @@
 
   <main class="main">
     <div class="login-all">
-      <form th:action="@{/sign-in}" method="post" class="form" >
-
+      <form th:action="@{/sign-in}" method="post" class="form">
         <div class="flex-column">
           <label>Електронна пошта </label>
         </div>
@@ -151,8 +152,8 @@
                   placeholder="Введіть Вашу почту"
                   class="input"
                   type="text"
-                  id ="username"
-                  name = "username"
+                  id="username"
+                  name="username"
           />
         </div>
 
@@ -192,10 +193,17 @@
           </div>
           <span class="span">Забули пароль?</span>
         </div>
-        <button class="button-submit" name="login-submit" id="login-submit" value="Log In">Увійти</button>
+        <button
+                class="button-submit"
+                name="login-submit"
+                id="login-submit"
+                value="Log In"
+        >
+          Увійти
+        </button>
         <p class="p">
           Немаєте облікового запису?
-          <a  href="/" th:href="@{/sign-up}" class="span">Зареєструватися</a>
+          <a href="/" th:href="@{/sign-up}" class="span">Зареєструватися</a>
         </p>
         <p class="p line">Або</p>
         <div class="main2">

@@ -41,7 +41,17 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	}
 
 	protected void configure(HttpSecurity http) throws Exception {
-		((HttpSecurity)((FormLoginConfigurer)((FormLoginConfigurer)((HttpSecurity)((ExpressionUrlAuthorizationConfigurer.AuthorizedUrl)((ExpressionUrlAuthorizationConfigurer.AuthorizedUrl)((ExpressionUrlAuthorizationConfigurer.AuthorizedUrl)((ExpressionUrlAuthorizationConfigurer.AuthorizedUrl)http.authorizeRequests().antMatchers(new String[]{"/**", "/js/", "/css/", "/img/", "/static/", "/services", "/menu", "/contact"})).permitAll().antMatchers(new String[]{"/admin/"})).hasRole("ADMIN").antMatchers(new String[]{"/index/**"})).hasRole("USER").anyRequest()).authenticated().and()).formLogin().loginPage("/sign-in").permitAll()).successHandler((request, response, authentication) -> {
+		((HttpSecurity)((FormLoginConfigurer)((FormLoginConfigurer)((HttpSecurity)((ExpressionUrlAuthorizationConfigurer
+				.AuthorizedUrl)
+				((ExpressionUrlAuthorizationConfigurer.AuthorizedUrl)
+						((ExpressionUrlAuthorizationConfigurer.AuthorizedUrl)
+								((ExpressionUrlAuthorizationConfigurer.AuthorizedUrl)http.authorizeRequests()
+										.antMatchers
+										(new String[]{"/**", "/js/", "/css/", "/img/", "/static/", "/services", "/menu", "/contact"})
+								).permitAll().antMatchers(new String[]{"/admin/"})).hasRole("ADMIN")
+								.antMatchers(new String[]{"/index/**"})).hasRole("USER")
+						.anyRequest()).authenticated().and()).formLogin().loginPage("/sign-in")
+				.permitAll()).successHandler((request, response, authentication) -> {
 			if (authentication.getAuthorities().stream().anyMatch((r) -> {
 				return r.getAuthority().equals("ROLE_ADMIN");
 			})) {
